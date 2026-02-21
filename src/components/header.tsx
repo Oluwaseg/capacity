@@ -27,7 +27,11 @@ export function Header() {
     >
       <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8'>
         {/* Logo */}
-        <Link href='/' className='flex items-center gap-3 group'>
+        <Link
+          href='/'
+          className='flex items-center gap-3 group'
+          data-aos='fade-right'
+        >
           <div className='h-10 w-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center font-semibold text-primary text-sm group-hover:bg-primary/15 transition-all duration-300'>
             C+
           </div>
@@ -37,7 +41,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className='hidden lg:flex items-center gap-1'>
+        <div className='hidden lg:flex items-center gap-1' data-aos='fade-down'>
           <NavLink href='/services/digital-gp-pharmacy-integration'>
             Digital Integration
           </NavLink>
@@ -47,7 +51,7 @@ export function Header() {
         </div>
 
         {/* CTA Buttons */}
-        <div className='hidden lg:flex items-center gap-3'>
+        <div className='hidden lg:flex items-center gap-3' data-aos='fade-left'>
           <ThemeToggle />
           <Link
             href='/contact'

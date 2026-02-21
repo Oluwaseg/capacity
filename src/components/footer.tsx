@@ -3,19 +3,22 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className='border-t border-border/50 bg-card/30 backdrop-blur-sm'>
+    <footer className='overflow-x-hidden border-t border-border/50 bg-card/30 backdrop-blur-sm'>
       {/* Newsletter CTA */}
       <div className='border-b border-border/50'>
         <div className='mx-auto max-w-7xl px-6 lg:px-8 py-12'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
-            <div>
+            <div data-aos='fade-right'>
               <h3 className='text-2xl font-bold mb-2'>Stay Updated</h3>
               <p className='text-muted-foreground'>
                 Get insights on healthcare innovation and practice
                 transformation.
               </p>
             </div>
-            <div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
+            <div
+              className='flex flex-col gap-3 sm:flex-row sm:items-center'
+              data-aos='fade-left'
+            >
               <input
                 type='email'
                 placeholder='your@email.com'
@@ -33,7 +36,7 @@ export function Footer() {
       <div className='mx-auto max-w-7xl px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 md:grid-cols-5 gap-12 mb-12'>
           {/* Brand */}
-          <div className='md:col-span-2 space-y-4'>
+          <div className='md:col-span-2 space-y-4' data-aos='fade-up'>
             <Link href='/' className='flex items-center gap-3 group'>
               <div className='h-10 w-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center font-semibold text-primary text-sm group-hover:bg-primary/15 transition-all duration-300'>
                 C+
@@ -69,7 +72,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div data-aos='fade-up' data-aos-delay='100'>
             <h4 className='font-semibold mb-6 text-foreground'>Services</h4>
             <ul className='space-y-3'>
               <li>
@@ -103,7 +106,7 @@ export function Footer() {
           </div>
 
           {/* Company */}
-          <div>
+          <div data-aos='fade-up' data-aos-delay='200'>
             <h4 className='font-semibold mb-6 text-foreground'>Company</h4>
             <ul className='space-y-3'>
               <li>
@@ -137,7 +140,7 @@ export function Footer() {
           </div>
 
           {/* Legal */}
-          <div>
+          <div data-aos='fade-up' data-aos-delay='300'>
             <h4 className='font-semibold mb-6 text-foreground'>Legal</h4>
             <ul className='space-y-3'>
               <li>

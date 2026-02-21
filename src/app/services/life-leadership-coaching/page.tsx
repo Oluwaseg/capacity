@@ -5,14 +5,14 @@ import Link from 'next/link';
 
 export default function CoachingPage() {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='overflow-x-hidden flex flex-col min-h-screen'>
       <Header />
 
       <main className='flex-1'>
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-secondary/10 to-transparent py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <div className='max-w-3xl'>
+            <div className='max-w-3xl' data-aos='fade-up'>
               <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
                 Life & Leadership Coaching
               </h1>
@@ -27,30 +27,52 @@ export default function CoachingPage() {
         {/* Problem Statement */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Is This You?</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-              <div className='bg-card border border-border rounded-lg p-6'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              Is This You?
+            </h2>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-6'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='0'
+              >
                 <h3 className='font-bold mb-2'>Experiencing Burnout</h3>
                 <p className='text-muted-foreground text-sm'>
                   Constant pressure, long hours, and emotional exhaustion are
                   wearing you down.
                 </p>
               </div>
-              <div className='bg-card border border-border rounded-lg p-6'>
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <h3 className='font-bold mb-2'>Decision Fatigue</h3>
                 <p className='text-muted-foreground text-sm'>
                   Making critical decisions daily leaves you drained and
                   questioning your direction.
                 </p>
               </div>
-              <div className='bg-card border border-border rounded-lg p-6'>
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <h3 className='font-bold mb-2'>Unsustainable Performance</h3>
                 <p className='text-muted-foreground text-sm'>
                   You're not sure how long you can maintain your current pace
                   and standards.
                 </p>
               </div>
-              <div className='bg-card border border-border rounded-lg p-6'>
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='300'
+              >
                 <h3 className='font-bold mb-2'>Unclear Identity</h3>
                 <p className='text-muted-foreground text-sm'>
                   Work defines you, and you've lost sight of who you are outside
@@ -64,8 +86,14 @@ export default function CoachingPage() {
         {/* Why Coaching Matters */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Why Coaching Matters</h2>
-            <div className='prose prose-sm max-w-none text-muted-foreground mb-12'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              Why Coaching Matters
+            </h2>
+            <div
+              className='prose prose-sm max-w-none text-muted-foreground mb-12'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               <p className='text-lg'>
                 Healthcare leaders face unique challenges: moral injury,
                 compassion fatigue, systemic pressures, and the weight of
@@ -82,7 +110,11 @@ export default function CoachingPage() {
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              <div className='bg-card border border-secondary/20 rounded-lg p-8'>
+              <div
+                className='bg-card border border-secondary/20 rounded-lg p-8'
+                data-aos='fade-right'
+                data-aos-delay='0'
+              >
                 <h3 className='text-xl font-bold mb-4 flex items-center gap-3'>
                   <Users className='h-6 w-6 text-secondary' />
                   1-on-1 Coaching
@@ -115,7 +147,11 @@ export default function CoachingPage() {
                 </ul>
               </div>
 
-              <div className='bg-card border border-secondary/20 rounded-lg p-8'>
+              <div
+                className='bg-card border border-secondary/20 rounded-lg p-8'
+                data-aos='fade-left'
+                data-aos-delay='100'
+              >
                 <h3 className='text-xl font-bold mb-4 flex items-center gap-3'>
                   <Target className='h-6 w-6 text-secondary' />
                   Small-Group Coaching
@@ -152,9 +188,15 @@ export default function CoachingPage() {
         {/* Focus Areas */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Core Focus Areas</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-              <div className='flex gap-4'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              Core Focus Areas
+            </h2>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-6'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
+              <div className='flex gap-4' data-aos='fade-up' data-aos-delay='0'>
                 <Heart className='h-6 w-6 text-secondary flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Burnout Recovery</h3>
@@ -164,7 +206,11 @@ export default function CoachingPage() {
                   </p>
                 </div>
               </div>
-              <div className='flex gap-4'>
+              <div
+                className='flex gap-4'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <Lightbulb className='h-6 w-6 text-secondary flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Decision Clarity</h3>
@@ -174,7 +220,11 @@ export default function CoachingPage() {
                   </p>
                 </div>
               </div>
-              <div className='flex gap-4'>
+              <div
+                className='flex gap-4'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <Target className='h-6 w-6 text-secondary flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Identity & Purpose</h3>
@@ -184,7 +234,11 @@ export default function CoachingPage() {
                   </p>
                 </div>
               </div>
-              <div className='flex gap-4'>
+              <div
+                className='flex gap-4'
+                data-aos='fade-up'
+                data-aos-delay='300'
+              >
                 <Users className='h-6 w-6 text-secondary flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Sustainable Performance</h3>
@@ -201,8 +255,14 @@ export default function CoachingPage() {
         {/* Outcomes */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>What You'll Achieve</h2>
-            <div className='bg-gradient-to-br from-secondary/5 to-transparent border border-secondary/10 rounded-xl p-8 sm:p-12'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              What You'll Achieve
+            </h2>
+            <div
+              className='bg-gradient-to-br from-secondary/5 to-transparent border border-secondary/10 rounded-xl p-8 sm:p-12'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               <ul className='space-y-4'>
                 <li className='flex items-start gap-3'>
                   <span className='text-secondary font-bold text-lg'>✓</span>
@@ -246,8 +306,17 @@ export default function CoachingPage() {
         {/* Registration Form */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8 text-center'>Get Started</h2>
-            <form className='bg-card border border-border rounded-xl p-8 space-y-6'>
+            <h2
+              className='text-3xl font-bold mb-8 text-center'
+              data-aos='fade-up'
+            >
+              Get Started
+            </h2>
+            <form
+              className='bg-card border border-border rounded-xl p-8 space-y-6'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               <div>
                 <label className='block text-sm font-medium mb-2'>
                   Full Name
@@ -298,7 +367,10 @@ export default function CoachingPage() {
 
         {/* CTA Section */}
         <section className='py-16 sm:py-24 bg-secondary text-secondary-foreground'>
-          <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center'>
+          <div
+            className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center'
+            data-aos='fade-up'
+          >
             <h2 className='text-3xl font-bold mb-4'>Ready for Change?</h2>
             <p className='text-lg mb-8 opacity-90 max-w-2xl mx-auto'>
               Book a discovery call to explore how coaching can transform your

@@ -12,7 +12,7 @@ export default function SocialMediaPage() {
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-accent/10 to-transparent py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <div className='max-w-3xl'>
+            <div className='max-w-3xl' data-aos='fade-up'>
               <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
                 Social Media & Visibility
               </h1>
@@ -27,10 +27,14 @@ export default function SocialMediaPage() {
         {/* Problem Statement */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
               The Visibility Challenge
             </h2>
-            <p className='text-lg text-muted-foreground mb-8 max-w-3xl'>
+            <p
+              className='text-lg text-muted-foreground mb-8 max-w-3xl'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               Pharmacies often struggle to stand out in a crowded market. While
               competitors capture local attention and build trust through
               strategic visibility, many healthcare providers are invisible on
@@ -38,7 +42,11 @@ export default function SocialMediaPage() {
               foot traffic, and position themselves as trusted healthcare
               experts.
             </p>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-6'
+              data-aos='fade-up'
+              data-aos-delay='200'
+            >
               <div className='bg-card border border-border rounded-lg p-6'>
                 <h3 className='font-bold mb-2'>No Clear Voice</h3>
                 <p className='text-muted-foreground text-sm'>
@@ -76,10 +84,14 @@ export default function SocialMediaPage() {
         {/* Our Approach */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
               Our Approach: Credibility, Not Virality
             </h2>
-            <p className='text-lg text-muted-foreground mb-12 max-w-3xl'>
+            <p
+              className='text-lg text-muted-foreground mb-12 max-w-3xl'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               We don't chase viral moments. Instead, we build strategic content
               that positions your pharmacy as a local healthcare authority,
               educates your community, and drives genuine engagement with local
@@ -87,8 +99,14 @@ export default function SocialMediaPage() {
             </p>
 
             {/* Content Strategy */}
-            <h3 className='text-2xl font-bold mb-6'>Strategic Content Types</h3>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-12'>
+            <h3 className='text-2xl font-bold mb-6' data-aos='fade-up'>
+              Strategic Content Types
+            </h3>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-12'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               <div className='bg-card border border-accent/20 rounded-lg p-6'>
                 <h4 className='font-bold mb-3 flex items-center gap-2'>
                   <BookOpen className='h-5 w-5 text-accent' />
@@ -138,9 +156,15 @@ export default function SocialMediaPage() {
         {/* Content Calendar & Process */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>How We Deliver</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              <div>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              How We Deliver
+            </h2>
+            <div
+              className='grid grid-cols-1 md:grid-cols-3 gap-8'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
+              <div data-aos='fade-up' data-aos-delay='0'>
                 <div className='flex items-center gap-4 mb-4'>
                   <div className='flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-accent text-accent-foreground font-bold'>
                     1
@@ -153,7 +177,7 @@ export default function SocialMediaPage() {
                 </p>
               </div>
 
-              <div>
+              <div data-aos='fade-up' data-aos-delay='100'>
                 <div className='flex items-center gap-4 mb-4'>
                   <div className='flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-accent text-accent-foreground font-bold'>
                     2
@@ -166,7 +190,7 @@ export default function SocialMediaPage() {
                 </p>
               </div>
 
-              <div>
+              <div data-aos='fade-up' data-aos-delay='200'>
                 <div className='flex items-center gap-4 mb-4'>
                   <div className='flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-accent text-accent-foreground font-bold'>
                     3
@@ -185,8 +209,14 @@ export default function SocialMediaPage() {
         {/* Expected Outcomes */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>What You'll Achieve</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              What You'll Achieve
+            </h2>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-6'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               <div className='flex gap-4'>
                 <span className='text-accent text-2xl font-bold flex-shrink-0'>
                   →
@@ -242,8 +272,14 @@ export default function SocialMediaPage() {
         {/* Example Content */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Sample Content Themes</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              Sample Content Themes
+            </h2>
+            <div
+              className='grid grid-cols-1 md:grid-cols-3 gap-6'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               <div className='bg-card border border-border rounded-lg p-6'>
                 <h3 className='font-bold mb-3'>Monday: Service Spotlight</h3>
                 <p className='text-muted-foreground text-sm'>
@@ -271,7 +307,10 @@ export default function SocialMediaPage() {
 
         {/* CTA Section */}
         <section className='py-16 sm:py-24 bg-accent text-accent-foreground'>
-          <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center'>
+          <div
+            className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center'
+            data-aos='fade-up'
+          >
             <h2 className='text-3xl font-bold mb-4'>
               Build Your Healthcare Credibility
             </h2>

@@ -18,7 +18,7 @@ export default function DigitalGPPharmacyPage() {
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-primary/10 to-transparent py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <div className='max-w-3xl'>
+            <div className='max-w-3xl' data-aos='fade-up'>
               <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
                 Digital GP-Pharmacy Integration
               </h1>
@@ -33,8 +33,14 @@ export default function DigitalGPPharmacyPage() {
         {/* Problem Statement */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>The Challenge</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              The Challenge
+            </h2>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-6'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               <div className='bg-card border border-border rounded-lg p-6'>
                 <h3 className='font-bold mb-2'>Manual Referral Processes</h3>
                 <p className='text-muted-foreground text-sm'>
@@ -70,16 +76,26 @@ export default function DigitalGPPharmacyPage() {
         {/* Solution Overview */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>How It Works</h2>
-            <p className='text-lg text-muted-foreground mb-12 max-w-3xl'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              How It Works
+            </h2>
+            <p
+              className='text-lg text-muted-foreground mb-12 max-w-3xl'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
               Our digital integration solution connects GPs and pharmacies with
               secure, compliant workflows backed by Service Level Agreements
               (SLAs) that ensure accountability and consistency.
             </p>
 
             {/* Process Steps */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              <div className='relative'>
+            <div
+              className='grid grid-cols-1 md:grid-cols-3 gap-8'
+              data-aos='fade-up'
+              data-aos-delay='200'
+            >
+              <div className='relative' data-aos='fade-up' data-aos-delay='0'>
                 <div className='flex items-center gap-4 mb-4'>
                   <div className='flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-primary text-primary-foreground font-bold'>
                     1
@@ -92,7 +108,7 @@ export default function DigitalGPPharmacyPage() {
                 </p>
               </div>
 
-              <div className='relative'>
+              <div className='relative' data-aos='fade-up' data-aos-delay='100'>
                 <div className='flex items-center gap-4 mb-4'>
                   <div className='flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-primary text-primary-foreground font-bold'>
                     2
@@ -105,7 +121,7 @@ export default function DigitalGPPharmacyPage() {
                 </p>
               </div>
 
-              <div className='relative'>
+              <div className='relative' data-aos='fade-up' data-aos-delay='200'>
                 <div className='flex items-center gap-4 mb-4'>
                   <div className='flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-primary text-primary-foreground font-bold'>
                     3
@@ -124,11 +140,19 @@ export default function DigitalGPPharmacyPage() {
         {/* Referral Types */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
               Supported Referral Types
             </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-              <div className='bg-card border border-primary/20 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-6'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
+              <div
+                className='bg-card border border-primary/20 rounded-lg p-6 hover:shadow-lg transition-shadow'
+                data-aos='fade-up'
+                data-aos-delay='0'
+              >
                 <h3 className='font-bold mb-2 flex items-center gap-2'>
                   <CheckCircle className='h-5 w-5 text-primary' />
                   Hypertension Management
@@ -138,7 +162,11 @@ export default function DigitalGPPharmacyPage() {
                   ongoing monitoring.
                 </p>
               </div>
-              <div className='bg-card border border-secondary/20 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+              <div
+                className='bg-card border border-secondary/20 rounded-lg p-6 hover:shadow-lg transition-shadow'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <h3 className='font-bold mb-2 flex items-center gap-2'>
                   <CheckCircle className='h-5 w-5 text-secondary' />
                   ABPM (Ambulatory BP Monitoring)
@@ -148,7 +176,11 @@ export default function DigitalGPPharmacyPage() {
                   oversight.
                 </p>
               </div>
-              <div className='bg-card border border-accent/20 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+              <div
+                className='bg-card border border-accent/20 rounded-lg p-6 hover:shadow-lg transition-shadow'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <h3 className='font-bold mb-2 flex items-center gap-2'>
                   <CheckCircle className='h-5 w-5 text-accent' />
                   Contraception Reviews
@@ -158,7 +190,11 @@ export default function DigitalGPPharmacyPage() {
                   communication and documentation.
                 </p>
               </div>
-              <div className='bg-card border border-primary/20 rounded-lg p-6 hover:shadow-lg transition-shadow'>
+              <div
+                className='bg-card border border-primary/20 rounded-lg p-6 hover:shadow-lg transition-shadow'
+                data-aos='fade-up'
+                data-aos-delay='300'
+              >
                 <h3 className='font-bold mb-2 flex items-center gap-2'>
                   <CheckCircle className='h-5 w-5 text-primary' />
                   Pharmacy First Referrals
@@ -175,9 +211,15 @@ export default function DigitalGPPharmacyPage() {
         {/* Key Benefits */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Key Benefits</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              <div className='flex gap-4'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
+              Key Benefits
+            </h2>
+            <div
+              className='grid grid-cols-1 md:grid-cols-2 gap-8'
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
+              <div className='flex gap-4' data-aos='fade-up' data-aos-delay='0'>
                 <Shield className='h-6 w-6 text-primary flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Compliant & Secure</h3>
@@ -187,7 +229,11 @@ export default function DigitalGPPharmacyPage() {
                   </p>
                 </div>
               </div>
-              <div className='flex gap-4'>
+              <div
+                className='flex gap-4'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <TrendingUp className='h-6 w-6 text-secondary flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Faster Referrals</h3>
@@ -197,7 +243,11 @@ export default function DigitalGPPharmacyPage() {
                   </p>
                 </div>
               </div>
-              <div className='flex gap-4'>
+              <div
+                className='flex gap-4'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <Users className='h-6 w-6 text-accent flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Better Collaboration</h3>
@@ -207,7 +257,11 @@ export default function DigitalGPPharmacyPage() {
                   </p>
                 </div>
               </div>
-              <div className='flex gap-4'>
+              <div
+                className='flex gap-4'
+                data-aos='fade-up'
+                data-aos-delay='300'
+              >
                 <TrendingUp className='h-6 w-6 text-primary flex-shrink-0 mt-1' />
                 <div>
                   <h3 className='font-bold mb-2'>Predictable Revenue</h3>
@@ -223,7 +277,10 @@ export default function DigitalGPPharmacyPage() {
 
         {/* CTA Section */}
         <section className='py-16 sm:py-24 bg-primary text-primary-foreground'>
-          <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center'>
+          <div
+            className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center'
+            data-aos='fade-up'
+          >
             <h2 className='text-3xl font-bold mb-4'>
               Ready to Streamline Your Referral Workflows?
             </h2>

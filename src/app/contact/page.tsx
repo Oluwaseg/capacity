@@ -4,13 +4,16 @@ import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen overflow-x-hidden'>
       <Header />
 
       <main className='flex-1'>
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-primary/10 to-transparent py-16 sm:py-24'>
-          <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+          <div
+            className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'
+            data-aos='fade-up'
+          >
             <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4'>
               Get in Touch
             </h1>
@@ -25,7 +28,7 @@ export default function ContactPage() {
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
               {/* Contact Form */}
-              <div>
+              <div data-aos='fade-right'>
                 <h2 className='text-2xl font-bold mb-6'>Send us a message</h2>
                 <form className='space-y-6'>
                   <div>
@@ -90,7 +93,7 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Info */}
-              <div>
+              <div data-aos='fade-left'>
                 <h2 className='text-2xl font-bold mb-6'>Contact Information</h2>
                 <div className='space-y-6'>
                   <div className='flex gap-4'>
@@ -166,11 +169,15 @@ export default function ContactPage() {
         {/* FAQ Section */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-3xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-2xl font-bold mb-8'>
-              Frequently Asked Questions
-            </h2>
+            <div data-aos='fade-up' className='mb-8'>
+              <h2 className='text-2xl font-bold'>Frequently Asked Questions</h2>
+            </div>
             <div className='space-y-4'>
-              <div className='bg-card border border-border rounded-lg p-6'>
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='0'
+              >
                 <h3 className='font-bold mb-2'>
                   How long is an initial consultation?
                 </h3>
@@ -180,7 +187,11 @@ export default function ContactPage() {
                   be the best fit.
                 </p>
               </div>
-              <div className='bg-card border border-border rounded-lg p-6'>
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <h3 className='font-bold mb-2'>
                   What's the next step after booking?
                 </h3>
@@ -189,7 +200,11 @@ export default function ContactPage() {
                   intake form to help us prepare for our conversation.
                 </p>
               </div>
-              <div className='bg-card border border-border rounded-lg p-6'>
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <h3 className='font-bold mb-2'>Can we meet virtually?</h3>
                 <p className='text-muted-foreground text-sm'>
                   Absolutely. All consultations are conducted virtually via
@@ -197,7 +212,11 @@ export default function ContactPage() {
                   professionals.
                 </p>
               </div>
-              <div className='bg-card border border-border rounded-lg p-6'>
+              <div
+                className='bg-card border border-border rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='300'
+              >
                 <h3 className='font-bold mb-2'>How quickly can we start?</h3>
                 <p className='text-muted-foreground text-sm'>
                   Depending on your needs, we can often begin work within 1-2

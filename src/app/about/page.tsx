@@ -5,13 +5,16 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='overflow-x-hidden flex flex-col min-h-screen'>
       <Header />
 
       <main className='flex-1'>
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-primary/10 to-transparent py-16 sm:py-24'>
-          <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+          <div
+            className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'
+            data-aos='fade-up'
+          >
             <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4'>
               About Capacity+
             </h1>
@@ -26,8 +29,13 @@ export default function AboutPage() {
         {/* Mission Section */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-6'>Our Mission</h2>
-            <div className='bg-card border border-primary/10 rounded-xl p-8 mb-8'>
+            <h2 className='text-3xl font-bold mb-6' data-aos='fade-right'>
+              Our Mission
+            </h2>
+            <div
+              className='bg-card border border-primary/10 rounded-xl p-8 mb-8'
+              data-aos='fade-up'
+            >
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Healthcare professionals are drowning in administrative burden.
                 Burnout is rampant. Clinicians are exhausted. Patients aren't
@@ -52,9 +60,15 @@ export default function AboutPage() {
         {/* Why We Exist */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Why We Do This</h2>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-right'>
+              Why We Do This
+            </h2>
             <div className='space-y-8'>
-              <div className='border-l-4 border-primary pl-6'>
+              <div
+                className='border-l-4 border-primary pl-6'
+                data-aos='fade-up'
+                data-aos-delay='0'
+              >
                 <h3 className='text-xl font-bold mb-2'>
                   Burnout Is Unsustainable
                 </h3>
@@ -64,7 +78,11 @@ export default function AboutPage() {
                   We're here to change that.
                 </p>
               </div>
-              <div className='border-l-4 border-secondary pl-6'>
+              <div
+                className='border-l-4 border-secondary pl-6'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <h3 className='text-xl font-bold mb-2'>
                   The System Needs Better Tools
                 </h3>
@@ -74,7 +92,11 @@ export default function AboutPage() {
                   don't know where to start.
                 </p>
               </div>
-              <div className='border-l-4 border-accent pl-6'>
+              <div
+                className='border-l-4 border-accent pl-6'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <h3 className='text-xl font-bold mb-2'>
                   Coaching Changes Lives
                 </h3>
@@ -84,7 +106,11 @@ export default function AboutPage() {
                   Coaching provides that.
                 </p>
               </div>
-              <div className='border-l-4 border-primary pl-6'>
+              <div
+                className='border-l-4 border-primary pl-6'
+                data-aos='fade-up'
+                data-aos-delay='300'
+              >
                 <h3 className='text-xl font-bold mb-2'>
                   Visibility Builds Trust
                 </h3>
@@ -101,15 +127,20 @@ export default function AboutPage() {
         {/* The Founder */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Meet the Founder</h2>
-            <div className='bg-card border border-border rounded-xl p-8'>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-right'>
+              Meet the Founder
+            </h2>
+            <div
+              className='bg-card border border-border rounded-xl p-8'
+              data-aos='fade-up'
+            >
               <div className='flex gap-8 flex-col md:flex-row'>
-                <div className='md:flex-shrink-0 md:w-48'>
+                <div className='md:flex-shrink-0 md:w-48' data-aos='fade-right'>
                   <div className='h-48 w-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center'>
                     <div className='text-6xl'>👋</div>
                   </div>
                 </div>
-                <div>
+                <div data-aos='fade-left'>
                   <h3 className='text-2xl font-bold mb-4'>
                     Your Healthcare Expert
                   </h3>
@@ -140,9 +171,15 @@ export default function AboutPage() {
         {/* Our Values */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold mb-8'>Our Values</h2>
+            <h2 className='text-3xl font-bold mb-8' data-aos='fade-right'>
+              Our Values
+            </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              <div className='bg-card border border-primary/10 rounded-lg p-6'>
+              <div
+                className='bg-card border border-primary/10 rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='0'
+              >
                 <h3 className='text-lg font-bold mb-2 text-primary'>
                   Clinician-Centric
                 </h3>
@@ -152,7 +189,11 @@ export default function AboutPage() {
                   for them, not against them.
                 </p>
               </div>
-              <div className='bg-card border border-secondary/10 rounded-lg p-6'>
+              <div
+                className='bg-card border border-secondary/10 rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <h3 className='text-lg font-bold mb-2 text-secondary'>
                   Evidence-Driven
                 </h3>
@@ -161,7 +202,11 @@ export default function AboutPage() {
                   knowledge to create solutions that actually work.
                 </p>
               </div>
-              <div className='bg-card border border-accent/10 rounded-lg p-6'>
+              <div
+                className='bg-card border border-accent/10 rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <h3 className='text-lg font-bold mb-2 text-accent'>
                   Honest & Grounded
                 </h3>
@@ -171,7 +216,11 @@ export default function AboutPage() {
                   healthcare.
                 </p>
               </div>
-              <div className='bg-card border border-primary/10 rounded-lg p-6'>
+              <div
+                className='bg-card border border-primary/10 rounded-lg p-6'
+                data-aos='fade-up'
+                data-aos-delay='300'
+              >
                 <h3 className='text-lg font-bold mb-2 text-primary'>
                   Long-Term Thinking
                 </h3>
@@ -186,7 +235,10 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <section className='py-16 sm:py-24 bg-primary text-primary-foreground'>
-          <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center'>
+          <div
+            className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center'
+            data-aos='fade-up'
+          >
             <h2 className='text-3xl font-bold mb-4'>Let's Work Together</h2>
             <p className='text-lg mb-8 opacity-90'>
               Whether you're looking to streamline operations, rebuild clinician

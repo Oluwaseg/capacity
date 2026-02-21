@@ -41,7 +41,7 @@ export default function Home() {
           <div className='relative mx-auto max-w-7xl px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
               {/* Left Content */}
-              <div className='space-y-8'>
+              <div className='space-y-8' data-aos='fade-up'>
                 <div className='space-y-4'>
                   <div className='inline-block'>
                     <span className='px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium'>
@@ -103,7 +103,10 @@ export default function Home() {
               </div>
 
               {/* Right Side - SVG Visual */}
-              <div className='relative lg:h-full hidden lg:flex items-center justify-center'>
+              <div
+                className='relative lg:h-full hidden lg:flex items-center justify-center'
+                data-aos='fade-left'
+              >
                 {/* Lottie Animation */}
                 <div className='relative w-full h-full'>
                   <Lottie
@@ -124,7 +127,7 @@ export default function Home() {
           className='py-20 lg:py-32 border-t border-border/50'
         >
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='text-center space-y-4 mb-16'>
+            <div className='text-center space-y-4 mb-16' data-aos='fade-up'>
               <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                 Our Integrated Solutions
               </h2>
@@ -139,6 +142,8 @@ export default function Home() {
               <Link
                 href='/services/digital-gp-pharmacy-integration'
                 className='group'
+                data-aos='fade-up'
+                data-aos-delay='0'
               >
                 <div className='relative h-full bg-card border border-border rounded-2xl p-8 hover:border-primary/50 hover:bg-card/80 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300'>
                   <div className='absolute -top-4 right-6 w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center'>
@@ -182,7 +187,12 @@ export default function Home() {
               </Link>
 
               {/* Solution 2 */}
-              <Link href='/services/life-leadership-coaching' className='group'>
+              <Link
+                href='/services/life-leadership-coaching'
+                className='group'
+                data-aos='fade-up'
+                data-aos-delay='100'
+              >
                 <div className='relative h-full bg-card border border-border rounded-2xl p-8 hover:border-secondary/50 hover:bg-card/80 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-300'>
                   <div className='absolute -top-4 right-6 w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center'>
                     <Lightbulb className='h-6 w-6 text-primary-foreground' />
@@ -223,7 +233,12 @@ export default function Home() {
               </Link>
 
               {/* Solution 3 */}
-              <Link href='/services/social-media-visibility' className='group'>
+              <Link
+                href='/services/social-media-visibility'
+                className='group'
+                data-aos='fade-up'
+                data-aos-delay='200'
+              >
                 <div className='relative h-full bg-card border border-border rounded-2xl p-8 hover:border-accent/50 hover:bg-card/80 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300'>
                   <div className='absolute -top-4 right-6 w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center'>
                     <TrendingUp className='h-6 w-6 text-primary-foreground' />
@@ -267,10 +282,10 @@ export default function Home() {
         </section>
 
         {/* Why Capacity+ Section */}
-        <section className='py-20 lg:py-32 bg-card/30 border-t border-border/50'>
+        <section className='overflow-x-hidden py-20 lg:py-32 bg-card/30 border-t border-border/50'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-              <div className='space-y-8'>
+              <div className='space-y-8' data-aos='fade-right'>
                 <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                   Why Healthcare Leaders Choose Capacity+
                 </h2>
@@ -321,7 +336,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className='grid grid-cols-2 gap-6'>
+              <div className='grid grid-cols-2 gap-6' data-aos='fade-left'>
                 <StatCard
                   label='Healthcare Professionals'
                   value='500+'
@@ -346,7 +361,7 @@ export default function Home() {
         {/* How It Works Section */}
         <section className='py-20 lg:py-32 border-t border-border/50'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='text-center space-y-4 mb-16'>
+            <div className='text-center space-y-4 mb-16' data-aos='fade-up'>
               <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                 How Capacity+ Works
               </h2>
@@ -378,7 +393,12 @@ export default function Home() {
                   desc: 'Ongoing guidance and optimization',
                 },
               ].map((item) => (
-                <div key={item.step} className='relative'>
+                <div
+                  key={item.step}
+                  className='relative'
+                  data-aos='fade-up'
+                  data-aos-delay={`${(item.step - 1) * 100}`}
+                >
                   <div className='bg-card border border-border rounded-xl p-6 h-full'>
                     <div className='flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-primary to-secondary mb-4'>
                       <span className='text-lg font-bold text-primary-foreground'>
@@ -402,7 +422,7 @@ export default function Home() {
         {/* Success Stories Section */}
         <section className='py-20 lg:py-32 bg-card/30 border-t border-border/50'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='text-center space-y-4 mb-16'>
+            <div className='text-center space-y-4 mb-16' data-aos='fade-up'>
               <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                 Success Stories
               </h2>
@@ -438,6 +458,8 @@ export default function Home() {
                 <div
                   key={i}
                   className='bg-background border border-border rounded-xl p-8'
+                  data-aos='fade-up'
+                  data-aos-delay={`${i * 100}`}
                 >
                   <div className='flex gap-1 mb-4'>
                     {[...Array(5)].map((_, j) => (
@@ -469,7 +491,7 @@ export default function Home() {
         {/* Key Features Section */}
         <section className='py-20 lg:py-32 border-t border-border/50'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='text-center space-y-4 mb-16'>
+            <div className='text-center space-y-4 mb-16' data-aos='fade-up'>
               <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                 Powerful Features Built for Healthcare
               </h2>
@@ -514,6 +536,8 @@ export default function Home() {
                 <div
                   key={i}
                   className='bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300'
+                  data-aos='fade-up'
+                  data-aos-delay={`${i * 100}`}
                 >
                   <div className='w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4'>
                     <feature.icon className='h-6 w-6' />
@@ -533,7 +557,7 @@ export default function Home() {
         {/* FAQ Section */}
         <section className='py-20 lg:py-32 bg-card/30 border-t border-border/50'>
           <div className='mx-auto max-w-4xl px-6 lg:px-8'>
-            <div className='text-center space-y-4 mb-16'>
+            <div className='text-center space-y-4 mb-16' data-aos='fade-up'>
               <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                 Frequently Asked Questions
               </h2>
@@ -569,7 +593,9 @@ export default function Home() {
                   a: 'Pricing is based on your practice size and chosen services. We offer flexible monthly or annual plans with no long-term contracts. Contact us for a personalized quote.',
                 },
               ].map((faq, i) => (
-                <FAQItem key={i} question={faq.q} answer={faq.a} />
+                <div key={i} data-aos='fade-up' data-aos-delay={`${i * 100}`}>
+                  <FAQItem question={faq.q} answer={faq.a} />
+                </div>
               ))}
             </div>
           </div>
@@ -577,7 +603,10 @@ export default function Home() {
 
         {/* Final CTA Section */}
         <section className='py-20 lg:py-32 border-t border-border/50'>
-          <div className='mx-auto max-w-4xl px-6 lg:px-8 text-center space-y-8'>
+          <div
+            className='mx-auto max-w-4xl px-6 lg:px-8 text-center space-y-8'
+            data-aos='fade-up'
+          >
             <div className='space-y-4'>
               <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                 Ready to Transform Your Practice?
