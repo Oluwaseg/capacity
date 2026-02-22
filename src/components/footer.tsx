@@ -1,4 +1,11 @@
-import { ArrowRight, Linkedin, Mail, Twitter } from 'lucide-react';
+import {
+  ArrowRight,
+  Instagram,
+  Linkedin,
+  Mail,
+  Music,
+  Twitter,
+} from 'lucide-react';
 import Link from 'next/link';
 
 export function Footer() {
@@ -50,20 +57,49 @@ export function Footer() {
               workflows, and build sustainable primary care practices.
             </p>
             <div className='flex gap-3 pt-4'>
+              {/* LinkedIn */}
               <a
-                href='https://linkedin.com'
+                href='https://www.linkedin.com/in/ojoseph-ebare?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='p-2 rounded-lg bg-muted/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300'
               >
                 <Linkedin className='h-5 w-5' />
               </a>
+
+              {/* X (Twitter) */}
               <a
-                href='https://twitter.com'
+                href='https://x.com/osenadiaje?s=21'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='p-2 rounded-lg bg-muted/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300'
               >
                 <Twitter className='h-5 w-5' />
               </a>
+
+              {/* Instagram */}
               <a
-                href='mailto:hello@capacity.plus'
+                href='https://www.instagram.com/itsaboutbecoming?igsh=MWhvODd2MjkzbWdzYQ%3D%3D&utm_source=qr'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-2 rounded-lg bg-muted/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300'
+              >
+                <Instagram className='h-5 w-5' />
+              </a>
+
+              {/* TikTok */}
+              <a
+                href='https://www.tiktok.com/@itsaboutbecoming?_r=1&_t=ZN-948ncNh4zUk'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-2 rounded-lg bg-muted/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300'
+              >
+                <Music className='h-5 w-5' />
+              </a>
+
+              {/* Email */}
+              <a
+                href='mailto:os@jemedicalassociates.com'
                 className='p-2 rounded-lg bg-muted/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300'
               >
                 <Mail className='h-5 w-5' />
