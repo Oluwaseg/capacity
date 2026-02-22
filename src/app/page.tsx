@@ -1,6 +1,10 @@
 'use client';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import {
+  TestimonialsColumn,
+  testimonials,
+} from '@/components/testimonials-column';
 import Lottie from 'lottie-react';
 import {
   ArrowRight,
@@ -28,6 +32,11 @@ export default function Home() {
       .then((data) => setAnimationData(data))
       .catch((err) => console.error('Failed to load animation:', err));
   }, []);
+
+  // Split testimonials into columns for animated display
+  const firstColumn = testimonials.slice(0, 3);
+  const secondColumn = testimonials.slice(3, 6);
+  const thirdColumn = testimonials.slice(6, 9);
 
   if (!animationData) return null; // or a placeholder
 
@@ -419,71 +428,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Success Stories Section */}
+        {/* Success Stories Section - Animated Testimonials */}
         <section className='py-20 lg:py-32 bg-card/30 border-t border-border/50'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='text-center space-y-4 mb-16' data-aos='fade-up'>
-              <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
-                Success Stories
+            <div
+              className='flex flex-col items-center justify-center max-w-2xl mx-auto mb-16'
+              data-aos='fade-up'
+            >
+              <h2 className='text-4xl lg:text-5xl font-bold tracking-tight text-center mb-4'>
+                Trusted by Healthcare Leaders
               </h2>
-              <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
-                See how healthcare leaders are transforming their practices
+              <p className='text-xl text-muted-foreground text-center'>
+                See what our healthcare professionals say about transforming
+                their practices
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              {[
-                {
-                  quote:
-                    'Capacity+ reduced our administrative burden by 40%. Our team now focuses on patient care instead of paperwork.',
-                  author: 'Dr. Sarah Johnson',
-                  role: 'GP Practice Director',
-                  metric: '40% time saved',
-                },
-                {
-                  quote:
-                    'The coaching program transformed how I approach leadership. I feel energized rather than burned out.',
-                  author: 'James Mitchell',
-                  role: 'Pharmacy Manager',
-                  metric: 'Better work-life balance',
-                },
-                {
-                  quote:
-                    "Our practice visibility increased significantly. We're now the trusted healthcare partner in our community.",
-                  author: 'Emma Chen',
-                  role: 'Practice Manager',
-                  metric: '3x patient inquiries',
-                },
-              ].map((story, i) => (
-                <div
-                  key={i}
-                  className='bg-background border border-border rounded-xl p-8'
-                  data-aos='fade-up'
-                  data-aos-delay={`${i * 100}`}
-                >
-                  <div className='flex gap-1 mb-4'>
-                    {[...Array(5)].map((_, j) => (
-                      <span key={j} className='text-accent text-lg'>
-                        ★
-                      </span>
-                    ))}
-                  </div>
-                  <p className='text-muted-foreground mb-6 italic'>
-                    "{story.quote}"
-                  </p>
-                  <div className='border-t border-border pt-4'>
-                    <p className='font-semibold text-foreground'>
-                      {story.author}
-                    </p>
-                    <p className='text-sm text-muted-foreground'>
-                      {story.role}
-                    </p>
-                    <p className='text-sm text-primary font-medium mt-2'>
-                      {story.metric}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            <div className='flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[600px] overflow-hidden'>
+              <TestimonialsColumn testimonials={firstColumn} duration={15} />
+              <TestimonialsColumn
+                testimonials={secondColumn}
+                className='hidden md:block'
+                duration={19}
+              />
+              <TestimonialsColumn
+                testimonials={thirdColumn}
+                className='hidden lg:block'
+                duration={17}
+              />
             </div>
           </div>
         </section>
