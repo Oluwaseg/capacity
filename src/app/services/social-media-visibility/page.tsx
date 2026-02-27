@@ -14,10 +14,11 @@ export default function SocialMediaPage() {
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <div className='max-w-3xl' data-aos='fade-up'>
               <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
-                AI-Powered Visibility for Primary Care
+                Social Media & Visibility
               </h1>
               <p className='text-xl text-muted-foreground mb-8 text-balance'>
-                Deploy AI-driven digital agents that create hyper-realistic, consistent content across Facebook, Instagram, and LinkedIn—at scale, without increasing workload.
+                Build credibility and position your pharmacy as a trusted
+                healthcare destination in your community.
               </p>
             </div>
           </div>
@@ -34,7 +35,12 @@ export default function SocialMediaPage() {
               data-aos='fade-up'
               data-aos-delay='100'
             >
-              Pharmacies and GP practices struggle to build digital presence without adding to already stretched teams. Creating consistent, credible content across social platforms requires time and expertise clinicians simply don't have. As AI becomes increasingly indistinguishable from reality, Capacity+ enables primary care teams to leverage this technology responsibly—improving patient education, visibility, and trust without increasing workload.
+              Pharmacies often struggle to stand out in a crowded market. While
+              competitors capture local attention and build trust through
+              strategic visibility, many healthcare providers are invisible on
+              social media, missing opportunities to educate patients, drive
+              foot traffic, and position themselves as trusted healthcare
+              experts.
             </p>
             <div
               className='grid grid-cols-1 md:grid-cols-2 gap-6'
@@ -42,29 +48,33 @@ export default function SocialMediaPage() {
               data-aos-delay='200'
             >
               <div className='bg-card border border-border rounded-lg p-6'>
-                <h3 className='font-bold mb-2'>Limited Bandwidth</h3>
+                <h3 className='font-bold mb-2'>No Clear Voice</h3>
                 <p className='text-muted-foreground text-sm'>
-                  Creating quality content consistently is impossible when teams are already stretched.
+                  Without consistent messaging, communities don't know what
+                  makes your pharmacy special.
                 </p>
               </div>
               <div className='bg-card border border-border rounded-lg p-6'>
                 <h3 className='font-bold mb-2'>
-                  Inconsistent Presence
+                  Missed Education Opportunities
                 </h3>
                 <p className='text-muted-foreground text-sm'>
-                  Without a strategy, social media efforts are sporadic and fail to build momentum or authority.
+                  Patients need guidance on services, wellness, and pharmacy
+                  care—social media is the perfect channel.
                 </p>
               </div>
               <div className='bg-card border border-border rounded-lg p-6'>
-                <h3 className='font-bold mb-2'>Lost Patient Trust</h3>
+                <h3 className='font-bold mb-2'>Lost Revenue</h3>
                 <p className='text-muted-foreground text-sm'>
-                  Lack of visibility and education means patients turn to less credible sources for guidance.
+                  Lack of visibility means missed foot traffic and service
+                  awareness among local patients.
                 </p>
               </div>
               <div className='bg-card border border-border rounded-lg p-6'>
-                <h3 className='font-bold mb-2'>Missed Service Growth</h3>
+                <h3 className='font-bold mb-2'>Ad-Hoc Content</h3>
                 <p className='text-muted-foreground text-sm'>
-                  Clinical services remain unknown to local patients who could benefit from them.
+                  Without a strategy, social media efforts are sporadic and fail
+                  to build momentum.
                 </p>
               </div>
             </div>
@@ -75,19 +85,22 @@ export default function SocialMediaPage() {
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
-              AI Agents That Mirror Your Voice
+              Our Approach: Credibility, Not Virality
             </h2>
             <p
               className='text-lg text-muted-foreground mb-12 max-w-3xl'
               data-aos='fade-up'
               data-aos-delay='100'
             >
-              Capacity+ deploys AI-driven digital agents that learn your voice, values, and expertise. These agents create hyper-realistic, consistent educational content across Facebook, Instagram, and LinkedIn—producing months of engaging posts in days. Content mirrors the pharmacist or GP's perspective, allowing your team to maintain presence and authority without the time commitment.
+              We don't chase viral moments. Instead, we build strategic content
+              that positions your pharmacy as a local healthcare authority,
+              educates your community, and drives genuine engagement with local
+              patients.
             </p>
 
             {/* Content Strategy */}
             <h3 className='text-2xl font-bold mb-6' data-aos='fade-up'>
-              What AI Agents Create
+              Strategic Content Types
             </h3>
             <div
               className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-12'
