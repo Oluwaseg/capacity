@@ -185,6 +185,32 @@ export default function CoachingPage() {
           </div>
         </section>
 
+        {/* Video Section */}
+        <section className='py-16 sm:py-24'>
+          <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
+            <div className='text-center space-y-8' data-aos='fade-up'>
+              <div className='space-y-4'>
+                <h2 className='text-3xl font-bold tracking-tight'>
+                  Understanding Coaching for Healthcare Leaders
+                </h2>
+                <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
+                  Discover how coaching transforms burnout into resilience
+                </p>
+              </div>
+              
+              <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
+                <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
+                  <div className='text-center space-y-4'>
+                    <div className='text-6xl'>🎬</div>
+                    <p>Video embed goes here</p>
+                    <p className='text-sm'>Replace with YouTube, Vimeo, or self-hosted video</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Focus Areas */}
         <section className='py-16 sm:py-24 bg-muted/20'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>

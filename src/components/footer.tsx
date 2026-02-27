@@ -138,6 +138,15 @@ export function Footer() {
                   <ArrowRight className='h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all' />
                 </Link>
               </li>
+              <li>
+                <Link
+                  href='/speaking'
+                  className='text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 group'
+                >
+                  Speaking{' '}
+                  <ArrowRight className='h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all' />
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -14,11 +14,10 @@ export default function SocialMediaPage() {
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <div className='max-w-3xl' data-aos='fade-up'>
               <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
-                Social Media & Visibility
+                AI-Powered Social Media Visibility
               </h1>
               <p className='text-xl text-muted-foreground mb-8 text-balance'>
-                Build credibility and position your pharmacy as a trusted
-                healthcare destination in your community.
+                Deploy AI-driven digital agents that create hyper-realistic, consistent content across Facebook, Instagram, and LinkedIn—at scale, without increasing your workload.
               </p>
             </div>
           </div>
@@ -85,17 +84,14 @@ export default function SocialMediaPage() {
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
-              Our Approach: Credibility, Not Virality
+              AI Social Media Agents: Your Digital Team
             </h2>
             <p
               className='text-lg text-muted-foreground mb-12 max-w-3xl'
               data-aos='fade-up'
               data-aos-delay='100'
             >
-              We don't chase viral moments. Instead, we build strategic content
-              that positions your pharmacy as a local healthcare authority,
-              educates your community, and drives genuine engagement with local
-              patients.
+              Capacity+ deploys AI-driven digital agents that mirror your pharmacist or GP's voice and presence. These agents produce educational, credible content at scale—creating hyper-realistic posts on Facebook, Instagram, and LinkedIn without requiring your daily input. As AI becomes indistinguishable from reality, we help primary care teams leverage this technology responsibly to improve patient education, visibility, and trust.
             </p>
 
             {/* Content Strategy */}
@@ -148,6 +144,32 @@ export default function SocialMediaPage() {
                   Q&A sessions, wellness events, and responsive engagement that
                   builds relationships with your local audience.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className='py-16 sm:py-24'>
+          <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
+            <div className='text-center space-y-8' data-aos='fade-up'>
+              <div className='space-y-4'>
+                <h2 className='text-3xl font-bold tracking-tight'>
+                  See AI-Powered Content in Action
+                </h2>
+                <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
+                  Watch how AI agents create credible, educational healthcare content
+                </p>
+              </div>
+              
+              <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
+                <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
+                  <div className='text-center space-y-4'>
+                    <div className='text-6xl'>🎬</div>
+                    <p>Video embed goes here</p>
+                    <p className='text-sm'>Replace with YouTube, Vimeo, or self-hosted video</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

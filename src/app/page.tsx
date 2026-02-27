@@ -5,7 +5,6 @@ import {
   TestimonialsColumn,
   testimonials,
 } from '@/components/testimonials-column';
-import Lottie from 'lottie-react';
 import {
   ArrowRight,
   Award,
@@ -16,29 +15,15 @@ import {
   TrendingUp,
   Users,
 } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Home() {
-  const [animationData, setAnimationData] = useState(null);
-
-  // Load JSON from CDN
-  useEffect(() => {
-    fetch(
-      'https://lottie.host/4982ead8-62a3-4d64-b793-ec4b1d353dda/MgGwz4oCDp.json'
-      // 'https://cdn.prod.website-files.com/673ac568ac902aab789fdf43/67e6e9d9614ce51c330104a3_background-wave-lines%20(1).json'
-    )
-      .then((res) => res.json())
-      .then((data) => setAnimationData(data))
-      .catch((err) => console.error('Failed to load animation:', err));
-  }, []);
-
   // Split testimonials into columns for animated display
   const firstColumn = testimonials.slice(0, 3);
   const secondColumn = testimonials.slice(3, 6);
   const thirdColumn = testimonials.slice(6, 9);
-
-  if (!animationData) return null; // or a placeholder
 
   return (
     <div className='flex flex-col min-h-screen bg-background'>
@@ -52,17 +37,18 @@ export default function Home() {
               {/* Left Content */}
               <div className='space-y-8' data-aos='fade-up'>
                 <div className='space-y-4'>
-                  <div className='inline-block'>
-                    <span className='px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium'>
-                      Healthcare Intelligence Platform
-                    </span>
+                  <div className='inline-flex items-center mb-4'>
+                    <Image
+                      src='/src/assets/images/logo.jpeg'
+                      alt='Capacity+ logo'
+                      width={48}
+                      height={40}
+                      className='h-12 w-auto'
+                      priority
+                    />
                   </div>
                   <h1 className='text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight'>
-                    Transform How{' '}
-                    <span className='bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent'>
-                      Primary Care
-                    </span>{' '}
-                    Operates
+                    We Increase Capacity in Primary Care
                   </h1>
                 </div>
 
@@ -87,44 +73,58 @@ export default function Home() {
                     View Solutions <ArrowRight className='h-4 w-4' />
                   </Link>
                 </div>
-
-                {/* Trust Indicators */}
-                <div className='pt-8 border-t border-border/50 flex gap-6'>
-                  <div>
-                    <p className='text-2xl font-bold text-primary'>500+</p>
-                    <p className='text-sm text-muted-foreground'>
-                      Healthcare Professionals
-                    </p>
-                  </div>
-                  <div>
-                    <p className='text-2xl font-bold text-secondary'>98%</p>
-                    <p className='text-sm text-muted-foreground'>
-                      Satisfaction Rate
-                    </p>
-                  </div>
-                  <div>
-                    <p className='text-2xl font-bold text-accent'>40%</p>
-                    <p className='text-sm text-muted-foreground'>
-                      Admin Time Saved
-                    </p>
-                  </div>
-                </div>
               </div>
 
-              {/* Right Side - SVG Visual */}
+              {/* Right Side - Flow of Care Image */}
               <div
-                className='relative lg:h-full hidden lg:flex items-center justify-center'
+                className='relative hidden lg:flex items-center justify-center'
                 data-aos='fade-left'
               >
-                {/* Lottie Animation */}
-                <div className='relative w-full h-full'>
-                  <Lottie
-                    animationData={animationData}
-                    loop={true}
-                    autoplay={true}
-                    className='w-full h-full object-contain'
-                  />
-                </div>
+                <Image
+                  src='/images/flow-of-care.jpg'
+                  alt='Flow of care showing GP consultation, patient direction to pharmacy, and pharmacy clinical appointment'
+                  width={500}
+                  height={500}
+                  className='w-full h-auto rounded-xl shadow-lg'
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Value Propositions Section */}
+        <section className='py-20 lg:py-32 border-t border-border/50 bg-card/30'>
+          <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {/* Transparent by Design */}
+              <div className='space-y-4' data-aos='fade-up'>
+                <h3 className='text-2xl font-bold text-primary'>
+                  Transparent by Design
+                </h3>
+                <p className='text-muted-foreground leading-relaxed'>
+                  Every referral. Every outcome. Fully trackable.
+                </p>
+              </div>
+
+              {/* Built for Capacity */}
+              <div className='space-y-4' data-aos='fade-up' data-aos-delay='100'>
+                <h3 className='text-2xl font-bold text-secondary'>
+                  Built for Capacity
+                </h3>
+                <p className='text-muted-foreground leading-relaxed'>
+                  Increase clinical throughput without increasing burnout.
+                </p>
+              </div>
+
+              {/* Aligned With Primary Care */}
+              <div className='space-y-4' data-aos='fade-up' data-aos-delay='200'>
+                <h3 className='text-2xl font-bold text-accent'>
+                  Aligned With Primary Care
+                </h3>
+                <p className='text-muted-foreground leading-relaxed'>
+                  Supports GP practices and pharmacies — not one at the expense of the other.
+                </p>
               </div>
             </div>
           </div>
@@ -160,12 +160,10 @@ export default function Home() {
                   </div>
 
                   <h3 className='text-2xl font-bold mb-3 mt-4 group-hover:text-primary transition-colors'>
-                    Digital GP-Pharmacy
+                    Digital GP–Pharmacy Integration
                   </h3>
                   <p className='text-muted-foreground mb-6 leading-relaxed'>
-                    Streamline referrals between GPs and pharmacies with secure,
-                    compliant workflows. Reduce administrative burden by 40% and
-                    accelerate patient care delivery.
+                    Streamline referrals with secure, compliant workflows backed by SLAs. Pharmacies gain access to GP systems; GPs unlock capacity. Transparent, trackable, sustainable.
                   </p>
 
                   <ul className='space-y-3 mb-8'>
@@ -208,12 +206,10 @@ export default function Home() {
                   </div>
 
                   <h3 className='text-2xl font-bold mb-3 mt-4 group-hover:text-secondary transition-colors'>
-                    Leadership Coaching
+                    Life & Leadership Coaching
                   </h3>
                   <p className='text-muted-foreground mb-6 leading-relaxed'>
-                    Combat clinician burnout with personalized 1-on-1 and group
-                    coaching. Develop resilience, decision-making clarity, and
-                    sustainable practice management.
+                    Combat burnout and build sustainable performance through principle-based coaching. For healthcare leaders seeking clarity, resilience, and transformation.
                   </p>
 
                   <ul className='space-y-3 mb-8'>
@@ -254,30 +250,28 @@ export default function Home() {
                   </div>
 
                   <h3 className='text-2xl font-bold mb-3 mt-4 group-hover:text-accent transition-colors'>
-                    Social Media Visibility
+                    AI-Powered Social Media Visibility
                   </h3>
                   <p className='text-muted-foreground mb-6 leading-relaxed'>
-                    Build trusted community presence and patient relationships
-                    through strategic content. Position your practice as a local
-                    healthcare authority.
+                    Deploy AI agents that create hyper-realistic, consistent educational content across Facebook, Instagram, and LinkedIn—at scale, without daily effort.
                   </p>
 
                   <ul className='space-y-3 mb-8'>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
                       <span className='text-sm'>
-                        Strategic content calendars
+                        AI agents mirror your voice and presence
                       </span>
                     </li>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
                       <span className='text-sm'>
-                        Community engagement strategies
+                        Educational content at scale
                       </span>
                     </li>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                      <span className='text-sm'>Analytics and insights</span>
+                      <span className='text-sm'>Increased local visibility and patient trust</span>
                     </li>
                   </ul>
 
@@ -290,78 +284,131 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why Capacity+ Section */}
+        {/* Why GP Practices Choose Section */}
         <section className='overflow-x-hidden py-20 lg:py-32 bg-card/30 border-t border-border/50'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-              <div className='space-y-8' data-aos='fade-right'>
+            <div className='space-y-12'>
+              <div className='space-y-4'>
                 <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
-                  Why Healthcare Leaders Choose Capacity+
+                  Why GP Practices Choose Capacity+
                 </h2>
-
-                <div className='space-y-6'>
-                  {[
-                    {
-                      icon: Award,
-                      title: 'Proven Results',
-                      description:
-                        'Trusted by 500+ healthcare professionals across the UK with measurable outcomes.',
-                    },
-                    {
-                      icon: Users,
-                      title: 'Healthcare Expertise',
-                      description:
-                        'Our team deeply understands NHS workflows, compliance, and the real challenges clinicians face.',
-                    },
-                    {
-                      icon: Shield,
-                      title: 'Data Security',
-                      description:
-                        'Enterprise-grade security with full GDPR and NHS compliance built in from day one.',
-                    },
-                    {
-                      icon: TrendingUp,
-                      title: 'Measurable Impact',
-                      description:
-                        'Track progress with comprehensive analytics and regular performance reviews.',
-                    },
-                  ].map((item, i) => (
-                    <div key={i} className='flex gap-4'>
-                      <div className='flex-shrink-0'>
-                        <div className='flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10 text-primary'>
-                          <item.icon className='h-6 w-6' />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className='text-lg font-semibold mb-1'>
-                          {item.title}
-                        </h3>
-                        <p className='text-muted-foreground'>
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
 
-              <div className='grid grid-cols-2 gap-6' data-aos='fade-left'>
-                <StatCard
-                  label='Healthcare Professionals'
-                  value='500+'
-                  color='primary'
-                />
-                <StatCard
-                  label='Satisfaction Rate'
-                  value='98%'
-                  color='secondary'
-                />
-                <StatCard label='Admin Time Saved' value='40%' color='accent' />
-                <StatCard
-                  label='Referral Speed +'
-                  value='3x Faster'
-                  color='primary'
-                />
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                <div className='space-y-4' data-aos='fade-up'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Offload appropriate appointments to pharmacy</h3>
+                      <p className='text-muted-foreground text-sm'>Free up clinical capacity for complex care</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='50'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Increase appointment availability for complex care</h3>
+                      <p className='text-muted-foreground text-sm'>Prioritize high-acuity patients</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='100'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Faster patient turnaround for clinical pathways</h3>
+                      <p className='text-muted-foreground text-sm'>Streamlined referral and outcome tracking</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='150'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Extended patient access when GP is closed</h3>
+                      <p className='text-muted-foreground text-sm'>24/7 pharmacy support</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='200'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Unlock collaborative workstreams with local pharmacies</h3>
+                      <p className='text-muted-foreground text-sm'>Build sustainable partnerships</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Pharmacies Choose Section */}
+        <section className='overflow-x-hidden py-20 lg:py-32 border-t border-border/50'>
+          <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+            <div className='space-y-12'>
+              <div className='space-y-4'>
+                <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
+                  Why Pharmacies Choose Capacity+
+                </h2>
+              </div>
+
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                <div className='space-y-4' data-aos='fade-up'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-secondary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Increased referral volume</h3>
+                      <p className='text-muted-foreground text-sm'>In some cases acting as a local referral hub</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='50'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-secondary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Structured, formalised GP relationships</h3>
+                      <p className='text-muted-foreground text-sm'>Professional governance framework</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='100'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-secondary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Clear governance via SLA + data-sharing framework</h3>
+                      <p className='text-muted-foreground text-sm'>Full compliance and transparency</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='150'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-secondary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Access to collaborative service development</h3>
+                      <p className='text-muted-foreground text-sm'>Co-create clinical pathways</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='space-y-4' data-aos='fade-up' data-aos-delay='200'>
+                  <div className='flex gap-3 items-start'>
+                    <Check className='h-6 w-6 text-secondary flex-shrink-0 mt-0.5' />
+                    <div>
+                      <h3 className='font-semibold mb-1'>Increased local visibility and patient trust</h3>
+                      <p className='text-muted-foreground text-sm'>Build community authority</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -379,27 +426,32 @@ export default function Home() {
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6'>
               {[
                 {
                   step: 1,
-                  title: 'Discovery Call',
-                  desc: 'Understand your unique challenges and goals',
+                  title: 'Strategic Discovery',
+                  desc: 'Workflow review & service alignment',
                 },
                 {
                   step: 2,
-                  title: 'Custom Plan',
-                  desc: 'Tailored solutions for your practice',
+                  title: 'SLA Agreement',
+                  desc: 'Governance & operational framework',
                 },
                 {
                   step: 3,
-                  title: 'Implementation',
-                  desc: 'Seamless onboarding and setup',
+                  title: 'Partner Activation',
+                  desc: 'GP–Pharmacy pathway setup',
                 },
                 {
                   step: 4,
-                  title: 'Support & Growth',
-                  desc: 'Ongoing guidance and optimization',
+                  title: 'Implementation',
+                  desc: 'Deployment & team onboarding',
+                },
+                {
+                  step: 5,
+                  title: 'Support & Scale',
+                  desc: 'Optimisation & capacity growth',
                 },
               ].map((item) => (
                 <div
@@ -417,13 +469,39 @@ export default function Home() {
                     <h3 className='text-lg font-semibold mb-2'>{item.title}</h3>
                     <p className='text-muted-foreground text-sm'>{item.desc}</p>
                   </div>
-                  {item.step < 4 && (
-                    <div className='hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 translate-x-1/2'>
+                  {item.step < 5 && (
+                    <div className='hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 translate-x-1/2'>
                       <ArrowRight className='h-5 w-5 text-primary/30' />
                     </div>
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Founder Video Section */}
+        <section className='py-20 lg:py-32 border-t border-border/50'>
+          <div className='mx-auto max-w-4xl px-6 lg:px-8'>
+            <div className='text-center space-y-8' data-aos='fade-up'>
+              <div className='space-y-4'>
+                <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
+                  Founder Overview
+                </h2>
+                <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
+                  Understand our vision and mission for transforming primary care
+                </p>
+              </div>
+
+              <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
+                <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
+                  <div className='text-center space-y-4'>
+                    <div className='text-6xl'>🎬</div>
+                    <p>Video embed goes here</p>
+                    <p className='text-sm'>Replace with YouTube, Vimeo, or self-hosted video</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -541,6 +619,10 @@ export default function Home() {
             <div className='space-y-4'>
               {[
                 {
+                  q: 'How do we integrate with existing systems?',
+                  a: 'Capacity+ supplies pharmacies with secure laptops that allow remote access into EMIS or SystmOne, provided access is granted by the GP practice. The model functions similarly to a remote pharmacist clinic — a widely adopted structure within primary care. This ensures referrals remain within NHS systems and governance frameworks while increasing local clinical capacity.',
+                },
+                {
                   q: 'How long does implementation take?',
                   a: 'Most practices are fully onboarded within 2-4 weeks. We provide dedicated support every step of the way to ensure a smooth transition.',
                 },
@@ -555,10 +637,6 @@ export default function Home() {
                 {
                   q: 'What kind of support do you provide?',
                   a: 'We offer 24/5 dedicated support, regular check-ins, training sessions, and continuous optimization based on your feedback and metrics.',
-                },
-                {
-                  q: 'Do you integrate with existing systems?',
-                  a: 'Yes, we integrate seamlessly with major NHS systems, practice management software, and pharmacy platforms. Our API is flexible and well-documented.',
                 },
                 {
                   q: "What's the pricing structure?",
@@ -651,9 +729,8 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       >
         <h3 className='text-lg font-semibold text-left'>{question}</h3>
         <ChevronDown
-          className={`h-5 w-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : ''
-          }`}
+          className={`h-5 w-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+            }`}
         />
       </button>
       {isOpen && (
