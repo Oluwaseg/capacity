@@ -20,27 +20,22 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? 'bg-background/80 backdrop-blur-xl border-b border-border'
-          : 'bg-transparent'
-      }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
+        ? 'bg-background/80 backdrop-blur-xl border-b border-border'
+        : 'bg-transparent'
+        }`}
     >
       <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8'>
         {/* Logo */}
         <Link
-          href='/'
-          className='flex items-center gap-2 group'
-          data-aos='fade-right'
+          href="/"
+          className="flex items-center gap-2 group"
+          data-aos="fade-right"
         >
-          <Image
-            src='/src/assets/images/logo.jpeg'
-            alt='Capacity+ logo'
-            width={40}
-            height={32}
-            className='h-8 w-auto group-hover:opacity-80 transition-opacity duration-300'
-            priority
-          />
+          <span className="font-semibold tracking-tight text-base lg:text-lg">
+            <span className="text-blue-600">Capacity</span>
+            <sup className="text-green-500 text-xs ml-0.5 align-super">+</sup>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
