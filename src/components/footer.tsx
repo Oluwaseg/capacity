@@ -44,12 +44,10 @@ export function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-5 gap-12 mb-12'>
           {/* Brand */}
           <div className='md:col-span-2 space-y-4' data-aos='fade-up'>
-            <Link href='/' className='flex items-center gap-3 group'>
-              <div className='h-10 w-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center font-semibold text-primary text-sm group-hover:bg-primary/15 transition-all duration-300'>
-                C+
-              </div>
-              <span className='font-semibold tracking-tight text-base lg:text-lg hidden sm:inline'>
-                Capacity+
+            <Link href="/" className="flex items-center gap-2 group">
+              <span className="font-semibold tracking-tight text-base lg:text-lg">
+                <span className="text-blue-600">Capacity</span>
+                <sup className="text-green-500 text-xs ml-0.5 align-super">+</sup>
               </span>
             </Link>
             <p className='text-muted-foreground leading-relaxed max-w-sm'>

@@ -1,4 +1,5 @@
 'use client';
+import { logo } from '@/assets';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import {
@@ -37,16 +38,16 @@ export default function Home() {
               {/* Left Content */}
               <div className='space-y-8' data-aos='fade-up'>
                 <div className='space-y-4'>
-                  <div className='inline-flex items-center mb-4'>
-                    <Image
-                      src='/src/assets/images/logo.jpeg'
-                      alt='Capacity+ logo'
-                      width={48}
-                      height={40}
-                      className='h-12 w-auto'
-                      priority
-                    />
-                  </div>
+                  <Link
+                    href="/"
+                    className="inline-flex items-center gap-3 rounded-xl border border-border/50 bg-background/70 backdrop-blur-md px-4 py-2 group hover:bg-background/90 transition-all"
+                    data-aos="fade-right"
+                  >
+                    <span className="font-semibold tracking-tight text-base lg:text-lg">
+                      <span className="text-blue-600">Capacity</span>
+                      <sup className="text-green-500 text-xs ml-0.5 align-super">+</sup>
+                    </span>
+                  </Link>
                   <h1 className='text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight'>
                     We Increase Capacity in Primary Care
                   </h1>
