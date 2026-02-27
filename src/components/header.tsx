@@ -1,6 +1,7 @@
 'use client';
 
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ThemeToggle } from './theme-toggle';
@@ -29,15 +30,17 @@ export function Header() {
         {/* Logo */}
         <Link
           href='/'
-          className='flex items-center gap-3 group'
+          className='flex items-center gap-2 group'
           data-aos='fade-right'
         >
-          <div className='h-10 w-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center font-semibold text-primary text-sm group-hover:bg-primary/15 transition-all duration-300'>
-            C+
-          </div>
-          <span className='font-semibold tracking-tight text-base lg:text-lg hidden sm:inline'>
-            Capacity+
-          </span>
+          <Image
+            src='/images/capacity-logo.png'
+            alt='Capacity+ logo'
+            width={32}
+            height={32}
+            className='h-8 w-auto group-hover:opacity-80 transition-opacity duration-300'
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

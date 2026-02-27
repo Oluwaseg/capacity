@@ -6,17 +6,18 @@ import {
   testimonials,
 } from '@/components/testimonials-column';
 import {
-    ArrowRight,
-    Award,
-    Check,
-    ChevronDown,
-    Lightbulb,
-    Shield,
-    TrendingUp,
-    Users,
-  } from 'lucide-react';
-  import Image from 'next/image';
-  import Link from 'next/link';
+  ArrowRight,
+  Award,
+  Check,
+  ChevronDown,
+  Lightbulb,
+  Shield,
+  TrendingUp,
+  Users,
+} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
   // Split testimonials into columns for animated display
@@ -36,11 +37,15 @@ export default function Home() {
               {/* Left Content */}
               <div className='space-y-8' data-aos='fade-up'>
                 <div className='space-y-4'>
-                  <div className='inline-flex items-center gap-3 mb-4'>
-                    <div className='h-10 w-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center font-semibold text-primary text-sm'>
-                      C+
-                    </div>
-                    <span className='text-sm font-semibold text-primary'>Capacity+</span>
+                  <div className='inline-flex items-center mb-4'>
+                    <Image
+                      src='/images/capacity-logo.png'
+                      alt='Capacity+ logo'
+                      width={48}
+                      height={48}
+                      className='h-12 w-auto'
+                      priority
+                    />
                   </div>
                   <h1 className='text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight'>
                     We Increase Capacity in Primary Care
@@ -487,7 +492,7 @@ export default function Home() {
                   Understand our vision and mission for transforming primary care
                 </p>
               </div>
-              
+
               <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
                 <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
                   <div className='text-center space-y-4'>
@@ -724,9 +729,8 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       >
         <h3 className='text-lg font-semibold text-left'>{question}</h3>
         <ChevronDown
-          className={`h-5 w-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : ''
-          }`}
+          className={`h-5 w-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+            }`}
         />
       </button>
       {isOpen && (
