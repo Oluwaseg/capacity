@@ -47,6 +47,7 @@ export function Header() {
           </NavLink>
           <NavLink href='/services/life-leadership-coaching'>Coaching</NavLink>
           <NavLink href='/services/social-media-visibility'>Visibility</NavLink>
+          <NavLink href='/speaking'>Speaking</NavLink>
           <NavLink href='/about'>About</NavLink>
         </div>
 
@@ -101,6 +102,9 @@ export function Header() {
               onClick={() => setIsOpen(false)}
             >
               Visibility
+            </MobileNavLink>
+            <MobileNavLink href='/speaking' onClick={() => setIsOpen(false)}>
+              Speaking
             </MobileNavLink>
             <MobileNavLink href='/about' onClick={() => setIsOpen(false)}>
               About
