@@ -73,6 +73,32 @@ export default function DigitalGPPharmacyPage() {
           </div>
         </section>
 
+        {/* Video Section */}
+        <section className='py-16 sm:py-24 bg-muted/20'>
+          <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
+            <div className='text-center space-y-8' data-aos='fade-up'>
+              <div className='space-y-4'>
+                <h2 className='text-3xl font-bold tracking-tight'>
+                  Understanding the Model
+                </h2>
+                <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
+                  Watch how digital integration transforms GP-pharmacy collaboration
+                </p>
+              </div>
+              
+              <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
+                <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
+                  <div className='text-center space-y-4'>
+                    <div className='text-6xl'>🎬</div>
+                    <p>Video embed goes here</p>
+                    <p className='text-sm'>Replace with YouTube, Vimeo, or self-hosted video</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Solution Overview */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
@@ -84,9 +110,7 @@ export default function DigitalGPPharmacyPage() {
               data-aos='fade-up'
               data-aos-delay='100'
             >
-              Our digital integration solution connects GPs and pharmacies with
-              secure, compliant workflows backed by Service Level Agreements
-              (SLAs) that ensure accountability and consistency.
+              Capacity+ supplies pharmacies with secure laptops that allow remote access into EMIS or SystmOne (with GP-granted access). This model functions similarly to a remote pharmacist clinic—a widely adopted structure within primary care. Referrals remain within NHS systems and governance frameworks while increasing local clinical capacity.
             </p>
 
             {/* Process Steps */}

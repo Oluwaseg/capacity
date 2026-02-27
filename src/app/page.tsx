@@ -5,40 +5,24 @@ import {
   TestimonialsColumn,
   testimonials,
 } from '@/components/testimonials-column';
-import Lottie from 'lottie-react';
 import {
-  ArrowRight,
-  Award,
-  Check,
-  ChevronDown,
-  Lightbulb,
-  Shield,
-  TrendingUp,
-  Users,
-} from 'lucide-react';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+    ArrowRight,
+    Award,
+    Check,
+    ChevronDown,
+    Lightbulb,
+    Shield,
+    TrendingUp,
+    Users,
+  } from 'lucide-react';
+  import Image from 'next/image';
+  import Link from 'next/link';
 
 export default function Home() {
-  const [animationData, setAnimationData] = useState(null);
-
-  // Load JSON from CDN
-  useEffect(() => {
-    fetch(
-      'https://lottie.host/4982ead8-62a3-4d64-b793-ec4b1d353dda/MgGwz4oCDp.json'
-      // 'https://cdn.prod.website-files.com/673ac568ac902aab789fdf43/67e6e9d9614ce51c330104a3_background-wave-lines%20(1).json'
-    )
-      .then((res) => res.json())
-      .then((data) => setAnimationData(data))
-      .catch((err) => console.error('Failed to load animation:', err));
-  }, []);
-
   // Split testimonials into columns for animated display
   const firstColumn = testimonials.slice(0, 3);
   const secondColumn = testimonials.slice(3, 6);
   const thirdColumn = testimonials.slice(6, 9);
-
-  if (!animationData) return null; // or a placeholder
 
   return (
     <div className='flex flex-col min-h-screen bg-background'>
@@ -86,20 +70,19 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Side - SVG Visual */}
+              {/* Right Side - Flow of Care Image */}
               <div
-                className='relative lg:h-full hidden lg:flex items-center justify-center'
+                className='relative hidden lg:flex items-center justify-center'
                 data-aos='fade-left'
               >
-                {/* Lottie Animation */}
-                <div className='relative w-full h-full'>
-                  <Lottie
-                    animationData={animationData}
-                    loop={true}
-                    autoplay={true}
-                    className='w-full h-full object-contain'
-                  />
-                </div>
+                <Image
+                  src='/images/flow-of-care.jpg'
+                  alt='Flow of care showing GP consultation, patient direction to pharmacy, and pharmacy clinical appointment'
+                  width={500}
+                  height={500}
+                  className='w-full h-auto rounded-xl shadow-lg'
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -172,12 +155,10 @@ export default function Home() {
                   </div>
 
                   <h3 className='text-2xl font-bold mb-3 mt-4 group-hover:text-primary transition-colors'>
-                    Digital GP-Pharmacy
+                    Digital GP–Pharmacy Integration
                   </h3>
                   <p className='text-muted-foreground mb-6 leading-relaxed'>
-                    Streamline referrals between GPs and pharmacies with secure,
-                    compliant workflows. Reduce administrative burden by 40% and
-                    accelerate patient care delivery.
+                    Streamline referrals with secure, compliant workflows backed by SLAs. Pharmacies gain access to GP systems; GPs unlock capacity. Transparent, trackable, sustainable.
                   </p>
 
                   <ul className='space-y-3 mb-8'>
@@ -220,12 +201,10 @@ export default function Home() {
                   </div>
 
                   <h3 className='text-2xl font-bold mb-3 mt-4 group-hover:text-secondary transition-colors'>
-                    Leadership Coaching
+                    Life & Leadership Coaching
                   </h3>
                   <p className='text-muted-foreground mb-6 leading-relaxed'>
-                    Combat clinician burnout with personalized 1-on-1 and group
-                    coaching. Develop resilience, decision-making clarity, and
-                    sustainable practice management.
+                    Combat burnout and build sustainable performance through principle-based coaching. For healthcare leaders seeking clarity, resilience, and transformation.
                   </p>
 
                   <ul className='space-y-3 mb-8'>
@@ -266,30 +245,28 @@ export default function Home() {
                   </div>
 
                   <h3 className='text-2xl font-bold mb-3 mt-4 group-hover:text-accent transition-colors'>
-                    Social Media Visibility
+                    AI-Powered Social Media Visibility
                   </h3>
                   <p className='text-muted-foreground mb-6 leading-relaxed'>
-                    Build trusted community presence and patient relationships
-                    through strategic content. Position your practice as a local
-                    healthcare authority.
+                    Deploy AI agents that create hyper-realistic, consistent educational content across Facebook, Instagram, and LinkedIn—at scale, without daily effort.
                   </p>
 
                   <ul className='space-y-3 mb-8'>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
                       <span className='text-sm'>
-                        Strategic content calendars
+                        AI agents mirror your voice and presence
                       </span>
                     </li>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
                       <span className='text-sm'>
-                        Community engagement strategies
+                        Educational content at scale
                       </span>
                     </li>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                      <span className='text-sm'>Analytics and insights</span>
+                      <span className='text-sm'>Increased local visibility and patient trust</span>
                     </li>
                   </ul>
 
