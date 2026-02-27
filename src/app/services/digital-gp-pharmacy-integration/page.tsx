@@ -73,20 +73,44 @@ export default function DigitalGPPharmacyPage() {
           </div>
         </section>
 
+        {/* Video Section */}
+        <section className='py-16 sm:py-24 bg-muted/20'>
+          <div className='mx-auto max-w-4xl px-4 sm:px-6 lg:px-8'>
+            <div className='text-center space-y-8' data-aos='fade-up'>
+              <div className='space-y-4'>
+                <h2 className='text-3xl sm:text-4xl font-bold tracking-tight'>
+                  How Digital Integration Works
+                </h2>
+                <p className='text-lg text-muted-foreground'>
+                  See the model in action and understand how your practice can benefit
+                </p>
+              </div>
+              
+              <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
+                <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
+                  <div className='text-center space-y-4'>
+                    <div className='text-6xl'>🎬</div>
+                    <p className='text-lg font-medium'>Video explains the integration model</p>
+                    <p className='text-sm'>Embed YouTube, Vimeo, or self-hosted video</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Solution Overview */}
         <section className='py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold mb-8' data-aos='fade-up'>
-              How It Works
+              The Integration Pathway
             </h2>
             <p
               className='text-lg text-muted-foreground mb-12 max-w-3xl'
               data-aos='fade-up'
               data-aos-delay='100'
             >
-              Our digital integration solution connects GPs and pharmacies with
-              secure, compliant workflows backed by Service Level Agreements
-              (SLAs) that ensure accountability and consistency.
+              Capacity+ supplies pharmacies with secure laptops that allow remote access into EMIS or SystmOne, provided access is granted by the GP practice. This model functions similarly to a remote pharmacist clinic — a widely adopted structure within primary care. It ensures referrals remain within NHS systems while increasing local clinical capacity.
             </p>
 
             {/* Process Steps */}

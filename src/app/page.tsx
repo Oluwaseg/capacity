@@ -5,7 +5,7 @@ import {
   TestimonialsColumn,
   testimonials,
 } from '@/components/testimonials-column';
-import Lottie from 'lottie-react';
+import Image from 'next/image';
 import {
   ArrowRight,
   Award,
@@ -17,28 +17,12 @@ import {
   Users,
 } from 'lucide-react';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [animationData, setAnimationData] = useState(null);
-
-  // Load JSON from CDN
-  useEffect(() => {
-    fetch(
-      'https://lottie.host/4982ead8-62a3-4d64-b793-ec4b1d353dda/MgGwz4oCDp.json'
-      // 'https://cdn.prod.website-files.com/673ac568ac902aab789fdf43/67e6e9d9614ce51c330104a3_background-wave-lines%20(1).json'
-    )
-      .then((res) => res.json())
-      .then((data) => setAnimationData(data))
-      .catch((err) => console.error('Failed to load animation:', err));
-  }, []);
-
   // Split testimonials into columns for animated display
   const firstColumn = testimonials.slice(0, 3);
   const secondColumn = testimonials.slice(3, 6);
   const thirdColumn = testimonials.slice(6, 9);
-
-  if (!animationData) return null; // or a placeholder
 
   return (
     <div className='flex flex-col min-h-screen bg-background'>
@@ -86,20 +70,19 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Side - SVG Visual */}
+              {/* Right Side - Flow of Care Image */}
               <div
-                className='relative lg:h-full hidden lg:flex items-center justify-center'
+                className='relative lg:h-full hidden lg:flex items-center justify-center rounded-2xl overflow-hidden'
                 data-aos='fade-left'
               >
-                {/* Lottie Animation */}
-                <div className='relative w-full h-full'>
-                  <Lottie
-                    animationData={animationData}
-                    loop={true}
-                    autoplay={true}
-                    className='w-full h-full object-contain'
-                  />
-                </div>
+                <Image
+                  src='/images/flow-of-care.jpg'
+                  alt='GP consultation, patient referral to pharmacy, and pharmacy clinical appointment showing flow of care'
+                  width={600}
+                  height={600}
+                  className='w-full h-full object-cover'
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -266,30 +249,28 @@ export default function Home() {
                   </div>
 
                   <h3 className='text-2xl font-bold mb-3 mt-4 group-hover:text-accent transition-colors'>
-                    Social Media Visibility
+                    AI-Powered Visibility
                   </h3>
                   <p className='text-muted-foreground mb-6 leading-relaxed'>
-                    Build trusted community presence and patient relationships
-                    through strategic content. Position your practice as a local
-                    healthcare authority.
+                    Deploy AI-driven agents that create hyper-realistic, consistent content across Facebook, Instagram, and LinkedIn—without increasing workload.
                   </p>
 
                   <ul className='space-y-3 mb-8'>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
                       <span className='text-sm'>
-                        Strategic content calendars
+                        AI agents that mirror your voice
                       </span>
                     </li>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
                       <span className='text-sm'>
-                        Community engagement strategies
+                        Content at scale, effortlessly
                       </span>
                     </li>
                     <li className='flex gap-3 items-start'>
                       <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                      <span className='text-sm'>Analytics and insights</span>
+                      <span className='text-sm'>Local authority and patient trust</span>
                     </li>
                   </ul>
 
