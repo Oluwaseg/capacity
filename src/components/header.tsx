@@ -34,9 +34,9 @@ export function Header() {
           data-aos='fade-right'
         >
           <Image
-            src='/images/capacity-logo.png'
+            src='/src/assets/images/logo.jpeg'
             alt='Capacity+ logo'
-            width={32}
+            width={40}
             height={32}
             className='h-8 w-auto group-hover:opacity-80 transition-opacity duration-300'
             priority

@@ -39,10 +39,10 @@ export default function Home() {
                 <div className='space-y-4'>
                   <div className='inline-flex items-center mb-4'>
                     <Image
-                      src='/images/capacity-logo.png'
+                      src='/src/assets/images/logo.jpeg'
                       alt='Capacity+ logo'
                       width={48}
-                      height={48}
+                      height={40}
                       className='h-12 w-auto'
                       priority
                     />
