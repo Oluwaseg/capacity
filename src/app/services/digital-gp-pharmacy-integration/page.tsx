@@ -7,6 +7,7 @@ import {
   TrendingUp,
   Users,
 } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function DigitalGPPharmacyPage() {
@@ -18,14 +19,26 @@ export default function DigitalGPPharmacyPage() {
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-primary/10 to-transparent py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <div className='max-w-3xl' data-aos='fade-up'>
-              <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
-                Digital GP-Pharmacy Integration
-              </h1>
-              <p className='text-xl text-muted-foreground mb-8 text-balance'>
-                Streamline referrals, reduce admin burden, and ensure safe data
-                sharing with SLA-backed workflows.
-              </p>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+              <div data-aos='fade-up'>
+                <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
+                  Digital GP-Pharmacy Integration
+                </h1>
+                <p className='text-xl text-muted-foreground mb-8 text-balance'>
+                  Streamline referrals, reduce admin burden, and ensure safe data
+                  sharing with SLA-backed workflows.
+                </p>
+              </div>
+              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
+                <Image
+                  src='/images/digital-integration-hero.jpg'
+                  alt='GP and pharmacist collaborating on patient data'
+                  width={500}
+                  height={400}
+                  className='rounded-xl shadow-lg w-full h-auto'
+                  priority
+                />
+              </div>
             </div>
           </div>
         </section>
