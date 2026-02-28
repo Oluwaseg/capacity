@@ -5,13 +5,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.985 0.002 240);
+  --background: oklch(0.975 0.008 70);
   --foreground: oklch(0.18 0.02 240);
 
-  --card: oklch(0.995 0.001 240);
+  --card: oklch(0.99 0.002 70);
   --card-foreground: oklch(0.18 0.02 240);
 
-  --popover: oklch(0.995 0.001 240);
+  --popover: oklch(0.99 0.002 70);
   --popover-foreground: oklch(0.18 0.02 240);
 
   /* Primary = Trust Blue */
@@ -22,7 +22,7 @@
   --secondary: oklch(0.46 0.12 185);
   --secondary-foreground: oklch(0.98 0.001 240);
 
-  --muted: oklch(0.93 0.01 240);
+  --muted: oklch(0.93 0.01 70);
   --muted-foreground: oklch(0.45 0.02 220);
 
   /* Accent = Warm confidence (used ONLY for CTAs / highlights) */
@@ -32,8 +32,8 @@
   --destructive: oklch(0.58 0.22 25);
   --destructive-foreground: oklch(0.98 0.001 240);
 
-  --border: oklch(0.9 0.01 240);
-  --input: oklch(0.96 0.01 240);
+  --border: oklch(0.88 0.01 70);
+  --input: oklch(0.96 0.01 70);
   --ring: oklch(0.47 0.14 235);
 
   --radius: 0.75rem;

@@ -2,6 +2,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function SpeakingPage() {
@@ -40,25 +41,38 @@ export default function SpeakingPage() {
         {/* Hero Section */}
         <section className='relative overflow-hidden pt-20 pb-32 lg:pt-32 lg:pb-48'>
           <div className='relative mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='max-w-4xl mx-auto text-center space-y-8' data-aos='fade-up'>
-              <div className='space-y-4'>
-                <h1 className='text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight'>
-                  Speaking Topics
-                </h1>
-                <p className='text-xl text-muted-foreground leading-relaxed text-balance max-w-2xl mx-auto'>
-                  Insights on leadership, transformation, and building sustainable
-                  systems in healthcare and beyond.
-                </p>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+              <div className='space-y-8' data-aos='fade-up'>
+                <div className='space-y-4'>
+                  <h1 className='text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight'>
+                    Speaking Topics
+                  </h1>
+                  <p className='text-xl text-muted-foreground leading-relaxed text-balance max-w-2xl'>
+                    Insights on leadership, transformation, and building sustainable
+                    systems in healthcare and beyond.
+                  </p>
+                </div>
+
+                <div className='flex flex-col sm:flex-row gap-4 pt-4'>
+                  <Link
+                    href='/contact'
+                    className='px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 font-semibold inline-flex items-center justify-center gap-2 group'
+                  >
+                    Book a Speaking Engagement{' '}
+                    <ArrowRight className='h-4 w-4 group-hover:translate-x-1 transition-transform' />
+                  </Link>
+                </div>
               </div>
 
-              <div className='flex flex-col sm:flex-row gap-4 justify-center pt-4'>
-                <Link
-                  href='/contact'
-                  className='px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 font-semibold inline-flex items-center justify-center gap-2 group'
-                >
-                  Book a Speaking Engagement{' '}
-                  <ArrowRight className='h-4 w-4 group-hover:translate-x-1 transition-transform' />
-                </Link>
+              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
+                <Image
+                  src='/images/speaking-hero.jpg'
+                  alt='Professional healthcare speaker presenting to an audience'
+                  width={500}
+                  height={400}
+                  className='rounded-xl shadow-lg w-full h-auto'
+                  priority
+                />
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { ArrowRight, Award, BookOpen, Users, Zap } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function SocialMediaPage() {
@@ -12,13 +13,25 @@ export default function SocialMediaPage() {
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-accent/10 to-transparent py-16 sm:py-24'>
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <div className='max-w-3xl' data-aos='fade-up'>
-              <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
-                AI-Powered Social Media Visibility
-              </h1>
-              <p className='text-xl text-muted-foreground mb-8 text-balance'>
-                Deploy AI-driven digital agents that create hyper-realistic, consistent content across Facebook, Instagram, and LinkedIn—at scale, without increasing your workload.
-              </p>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+              <div data-aos='fade-up'>
+                <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-balance'>
+                  AI-Powered Social Media Visibility
+                </h1>
+                <p className='text-xl text-muted-foreground mb-8 text-balance'>
+                  Deploy AI-driven digital agents that create hyper-realistic, consistent content across Facebook, Instagram, and LinkedIn—at scale, without increasing your workload.
+                </p>
+              </div>
+              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
+                <Image
+                  src='/images/ai-visibility-hero.jpg'
+                  alt='Healthcare professional creating AI-powered social media content'
+                  width={500}
+                  height={400}
+                  className='rounded-xl shadow-lg w-full h-auto'
+                  priority
+                />
+              </div>
             </div>
           </div>
         </section>
