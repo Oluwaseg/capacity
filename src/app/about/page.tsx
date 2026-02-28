@@ -1,6 +1,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -11,18 +12,29 @@ export default function AboutPage() {
       <main className='flex-1'>
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-primary/10 to-transparent py-16 sm:py-24'>
-          <div
-            className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'
-            data-aos='fade-up'
-          >
-            <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4'>
-              About Capacity+
-            </h1>
-            <p className='text-xl text-muted-foreground max-w-2xl'>
-              We exist to transform primary care by reducing clinician burden,
-              improving patient outcomes, and building sustainable healthcare
-              systems.
-            </p>
+          <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+              <div data-aos='fade-up'>
+                <h1 className='text-4xl sm:text-5xl font-bold tracking-tight mb-4'>
+                  About Capacity+
+                </h1>
+                <p className='text-xl text-muted-foreground max-w-2xl'>
+                  We exist to transform primary care by reducing clinician burden,
+                  improving patient outcomes, and building sustainable healthcare
+                  systems.
+                </p>
+              </div>
+              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
+                <Image
+                  src='/images/about-hero.jpg'
+                  alt='Capacity+ team collaborating on healthcare innovation'
+                  width={500}
+                  height={400}
+                  className='rounded-xl shadow-lg w-full h-auto'
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </section>
 
