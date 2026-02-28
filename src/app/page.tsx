@@ -40,8 +40,17 @@ export default function Home() {
               <div className='space-y-8' data-aos='fade-up'>
                 <div className='space-y-4'>
 
+                  <div className='inline-block mb-4'>
+                    <span className='px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium'>
+                      Healthcare Intelligence Platform
+                    </span>
+                  </div>
+
                   <h1 className='text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight'>
-                    We Increase Capacity in Primary Care
+                    <span className='bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent'>
+                      We Increase Capacity
+                    </span>{' '}
+                    in Primary Care
                   </h1>
                 </div>
 

@@ -1,3 +1,4 @@
+'use client'
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import {
@@ -7,10 +8,23 @@ import {
   TrendingUp,
   Users,
 } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Lottie from 'lottie-react';
+import { useState, useEffect } from 'react';
 
 export default function DigitalGPPharmacyPage() {
+  const [animationData, setAnimationData] = useState(null);
+
+  // Load JSON from CDN
+  useEffect(() => {
+    fetch(
+      'https://lottie.host/f3a3a309-8f00-4ea3-80cd-9be9f74b434f/ShFhI1WmIp.json'
+    )
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.error('Failed to load animation:', err));
+  }, []);
+
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />
@@ -30,14 +44,15 @@ export default function DigitalGPPharmacyPage() {
                 </p>
               </div>
               <div data-aos='fade-left' className='hidden lg:flex justify-center'>
-                <Image
-                  src='/images/digital-integration-hero.jpg'
-                  alt='GP and pharmacist collaborating on patient data'
-                  width={500}
-                  height={400}
-                  className='rounded-xl shadow-lg w-full h-auto'
-                  priority
-                />
+                {/* Lottie Animation */}
+                <div className='relative w-full h-full'>
+                  <Lottie
+                    animationData={animationData}
+                    loop={true}
+                    autoplay={true}
+                    className='w-full h-full object-contain'
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -98,7 +113,7 @@ export default function DigitalGPPharmacyPage() {
                   Watch how digital integration transforms GP-pharmacy collaboration
                 </p>
               </div>
-              
+
               <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
                 <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
                   <div className='text-center space-y-4'>
