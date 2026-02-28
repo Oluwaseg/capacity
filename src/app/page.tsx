@@ -2,10 +2,10 @@
 import { logo } from '@/assets';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
-import {
-  TestimonialsColumn,
-  testimonials,
-} from '@/components/testimonials-column';
+// import {
+//   TestimonialsColumn,
+//   testimonials,
+// } from '@/components/testimonials-column';
 import {
   ArrowRight,
   Award,
@@ -21,10 +21,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Home() {
+  // Comment testimonial for now
   // Split testimonials into columns for animated display
-  const firstColumn = testimonials.slice(0, 3);
-  const secondColumn = testimonials.slice(3, 6);
-  const thirdColumn = testimonials.slice(6, 9);
+  // const firstColumn = testimonials.slice(0, 3);
+  // const secondColumn = testimonials.slice(3, 6);
+  // const thirdColumn = testimonials.slice(6, 9);
 
   return (
     <div className='flex flex-col min-h-screen bg-background'>
@@ -38,16 +39,7 @@ export default function Home() {
               {/* Left Content */}
               <div className='space-y-8' data-aos='fade-up'>
                 <div className='space-y-4'>
-                  <Link
-                    href="/"
-                    className="inline-flex items-center gap-3 rounded-xl border border-border/50 bg-background/70 backdrop-blur-md px-4 py-2 group hover:bg-background/90 transition-all"
-                    data-aos="fade-right"
-                  >
-                    <span className="font-semibold tracking-tight text-base lg:text-lg">
-                      <span className="text-blue-600">Capacity</span>
-                      <sup className="text-green-500 text-xs ml-0.5 align-super">+</sup>
-                    </span>
-                  </Link>
+
                   <h1 className='text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight'>
                     We Increase Capacity in Primary Care
                   </h1>
@@ -508,7 +500,7 @@ export default function Home() {
         </section>
 
         {/* Success Stories Section - Animated Testimonials */}
-        <section className='py-20 lg:py-32 bg-card/30 border-t border-border/50'>
+        {/* <section className='py-20 lg:py-32 bg-card/30 border-t border-border/50'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8'>
             <div
               className='flex flex-col items-center justify-center max-w-2xl mx-auto mb-16'
@@ -537,7 +529,7 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Key Features Section */}
         <section className='py-20 lg:py-32 border-t border-border/50'>

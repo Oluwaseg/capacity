@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ThemeToggle } from './theme-toggle';
+import { logo } from '@/assets';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,10 +33,14 @@ export function Header() {
           className="flex items-center gap-2 group"
           data-aos="fade-right"
         >
-          <span className="font-semibold tracking-tight text-base lg:text-lg">
-            <span className="text-blue-600">Capacity</span>
-            <sup className="text-green-500 text-xs ml-0.5 align-super">+</sup>
-          </span>
+          <Image
+            src={logo}
+            alt="Capacity Plus Logo"
+            width={140}
+            height={40}
+            priority
+            className="h-auto w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
