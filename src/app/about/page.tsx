@@ -1,11 +1,12 @@
 'use client';
+import { owner } from '@/assets';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import Lottie from 'lottie-react';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
 export default function AboutPage() {
   const [animationData, setAnimationData] = useState(null);
 
@@ -164,8 +165,15 @@ export default function AboutPage() {
             >
               <div className='flex gap-8 flex-col md:flex-row'>
                 <div className='md:flex-shrink-0 md:w-48' data-aos='fade-right'>
-                  <div className='h-48 w-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center'>
-                    <div className='text-6xl'>👋</div>
+                  <div className='h-48 w-48 rounded-lg overflow-hidden border border-border'>
+                    <Image
+                      src={owner}
+                      alt='Founder of Capacity+'
+                      width={192}
+                      height={192}
+                      className='object-cover w-full h-full'
+                      priority
+                    />
                   </div>
                 </div>
                 <div data-aos='fade-left'>

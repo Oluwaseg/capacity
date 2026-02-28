@@ -12,7 +12,9 @@ export default function SpeakingPage() {
   // Load JSON from CDN
   useEffect(() => {
     fetch(
-      'https://lottie.host/eb5c4a5e-4c19-4451-81cd-3e4194ae9a37/mtQFRBmudt.json'
+      'https://lottie.host/58cfcf91-9554-4207-aafa-5351aec20ed1/JSKzHwB26k.json'
+
+      // 'https://lottie.host/eb5c4a5e-4c19-4451-81cd-3e4194ae9a37/mtQFRBmudt.json'
     )
       .then((res) => res.json())
       .then((data) => setAnimationData(data))
