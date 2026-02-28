@@ -1,35 +1,47 @@
 'use client';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import Lottie from 'lottie-react';
+import { Activity, ArrowRight, Compass, RefreshCw, Smile } from 'lucide-react';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function SpeakingPage() {
+  const [animationData, setAnimationData] = useState(null);
+
+  // Load JSON from CDN
+  useEffect(() => {
+    fetch(
+      'https://lottie.host/eb5c4a5e-4c19-4451-81cd-3e4194ae9a37/mtQFRBmudt.json'
+    )
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.error('Failed to load animation:', err));
+  }, []);
   const topics = [
     {
       title: 'Principles Over Beliefs',
       description:
         'How aligning with universal principles — rather than personal opinions — creates predictable, scalable success in life and leadership.',
-      icon: '📐',
+      icon: <Compass className='w-12 h-12 text-primary' />,
     },
     {
       title: 'Transformation Inside and Outside Work',
       description:
         'Why performance at work mirrors alignment in personal life — and how to build systems that support both.',
-      icon: '🔄',
+      icon: <RefreshCw className='w-12 h-12 text-secondary' />,
     },
     {
       title: 'Increasing Capacity in Primary Care',
       description:
         'A forward-thinking look at GP–pharmacy integration, workforce burnout, and how infrastructure — not willpower — solves systemic pressure.',
-      icon: '⚡',
+      icon: <Activity className='w-12 h-12 text-accent' />,
     },
     {
       title: 'The Pursuit of Happiness — Finding It Now',
       description:
-        'Why happiness isn\'t a future destination, but a by-product of aligned daily actions.',
-      icon: '😊',
+        "Why happiness isn't a future destination, but a by-product of aligned daily actions.",
+      icon: <Smile className='w-12 h-12 text-green-500' />,
     },
   ];
 
@@ -48,8 +60,8 @@ export default function SpeakingPage() {
                     Speaking Topics
                   </h1>
                   <p className='text-xl text-muted-foreground leading-relaxed text-balance max-w-2xl'>
-                    Insights on leadership, transformation, and building sustainable
-                    systems in healthcare and beyond.
+                    Insights on leadership, transformation, and building
+                    sustainable systems in healthcare and beyond.
                   </p>
                 </div>
 
@@ -64,15 +76,18 @@ export default function SpeakingPage() {
                 </div>
               </div>
 
-              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
-                <Image
-                  src='/images/speaking-hero.jpg'
-                  alt='Professional healthcare speaker presenting to an audience'
-                  width={500}
-                  height={400}
-                  className='rounded-xl shadow-lg w-full h-auto'
-                  priority
-                />
+              <div
+                data-aos='fade-left'
+                className='hidden lg:flex justify-center'
+              >
+                <div className='relative w-full h-full'>
+                  <Lottie
+                    animationData={animationData}
+                    loop={true}
+                    autoplay={true}
+                    className='w-full h-full object-contain'
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -106,7 +121,10 @@ export default function SpeakingPage() {
 
         {/* Call to Action Section */}
         <section className='py-20 lg:py-32 bg-card/30 border-t border-border/50'>
-          <div className='mx-auto max-w-4xl px-6 lg:px-8 text-center space-y-8' data-aos='fade-up'>
+          <div
+            className='mx-auto max-w-4xl px-6 lg:px-8 text-center space-y-8'
+            data-aos='fade-up'
+          >
             <div className='space-y-4'>
               <h2 className='text-4xl lg:text-5xl font-bold tracking-tight'>
                 Interested in Having Us Speak at Your Event?

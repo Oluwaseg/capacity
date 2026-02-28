@@ -1,10 +1,23 @@
+'use client';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import Lottie from 'lottie-react';
 import { ArrowRight, Heart, Lightbulb, Target, Users } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function CoachingPage() {
+  const [animationData, setAnimationData] = useState(null);
+
+  // Load JSON from CDN
+  useEffect(() => {
+    fetch(
+      'https://lottie.host/0a798f17-8671-49c3-be7d-f766c06c1602/JoHTY1EpTC.json'
+    )
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.error('Failed to load animation:', err));
+  }, []);
   return (
     <div className='overflow-x-hidden flex flex-col min-h-screen'>
       <Header />
@@ -19,19 +32,22 @@ export default function CoachingPage() {
                   Life & Leadership Coaching
                 </h1>
                 <p className='text-xl text-muted-foreground mb-8 text-balance'>
-                  Combat burnout, resolve decision fatigue, and build sustainable
-                  leadership through personalized coaching.
+                  Combat burnout, resolve decision fatigue, and build
+                  sustainable leadership through personalized coaching.
                 </p>
               </div>
-              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
-                <Image
-                  src='/images/coaching-hero.jpg'
-                  alt='Healthcare leader empowered through coaching and transformation'
-                  width={500}
-                  height={400}
-                  className='rounded-xl shadow-lg w-full h-auto'
-                  priority
-                />
+              <div
+                data-aos='fade-left'
+                className='hidden lg:flex justify-center'
+              >
+                <div className='relative w-full h-full'>
+                  <Lottie
+                    animationData={animationData}
+                    loop={true}
+                    autoplay={true}
+                    className='w-full h-full object-contain'
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -210,13 +226,15 @@ export default function CoachingPage() {
                   Discover how coaching transforms burnout into resilience
                 </p>
               </div>
-              
+
               <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
                 <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
                   <div className='text-center space-y-4'>
                     <div className='text-6xl'>🎬</div>
                     <p>Video embed goes here</p>
-                    <p className='text-sm'>Replace with YouTube, Vimeo, or self-hosted video</p>
+                    <p className='text-sm'>
+                      Replace with YouTube, Vimeo, or self-hosted video
+                    </p>
                   </div>
                 </div>
               </div>

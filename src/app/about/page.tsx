@@ -1,10 +1,23 @@
+'use client';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import Lottie from 'lottie-react';
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
+  const [animationData, setAnimationData] = useState(null);
+
+  // Load JSON from CDN
+  useEffect(() => {
+    fetch(
+      'https://lottie.host/87e2c9b7-164d-4527-9765-46540306e914/D83eJQNWtX.json'
+    )
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.error('Failed to load animation:', err));
+  }, []);
   return (
     <div className='overflow-x-hidden flex flex-col min-h-screen'>
       <Header />
@@ -19,20 +32,23 @@ export default function AboutPage() {
                   About Capacity+
                 </h1>
                 <p className='text-xl text-muted-foreground max-w-2xl'>
-                  We exist to transform primary care by reducing clinician burden,
-                  improving patient outcomes, and building sustainable healthcare
-                  systems.
+                  We exist to transform primary care by reducing clinician
+                  burden, improving patient outcomes, and building sustainable
+                  healthcare systems.
                 </p>
               </div>
-              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
-                <Image
-                  src='/images/about-hero.jpg'
-                  alt='Capacity+ team collaborating on healthcare innovation'
-                  width={500}
-                  height={400}
-                  className='rounded-xl shadow-lg w-full h-auto'
-                  priority
-                />
+              <div
+                data-aos='fade-left'
+                className='hidden lg:flex justify-center'
+              >
+                <div className='relative w-full h-full'>
+                  <Lottie
+                    animationData={animationData}
+                    loop={true}
+                    autoplay={true}
+                    className='w-full h-full object-contain'
+                  />
+                </div>
               </div>
             </div>
           </div>

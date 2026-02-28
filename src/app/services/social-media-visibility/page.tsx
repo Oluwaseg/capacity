@@ -1,10 +1,23 @@
+'use client';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import Lottie from 'lottie-react';
 import { ArrowRight, Award, BookOpen, Users, Zap } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function SocialMediaPage() {
+  const [animationData, setAnimationData] = useState(null);
+
+  // Load JSON from CDN
+  useEffect(() => {
+    fetch(
+      'https://lottie.host/52ac9bd8-acfd-4de4-88f0-461ae68cccad/iFRsxh7fYE.json'
+    )
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.error('Failed to load animation:', err));
+  }, []);
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />
@@ -19,18 +32,23 @@ export default function SocialMediaPage() {
                   AI-Powered Social Media Visibility
                 </h1>
                 <p className='text-xl text-muted-foreground mb-8 text-balance'>
-                  Deploy AI-driven digital agents that create hyper-realistic, consistent content across Facebook, Instagram, and LinkedIn—at scale, without increasing your workload.
+                  Deploy AI-driven digital agents that create hyper-realistic,
+                  consistent content across Facebook, Instagram, and LinkedIn—at
+                  scale, without increasing your workload.
                 </p>
               </div>
-              <div data-aos='fade-left' className='hidden lg:flex justify-center'>
-                <Image
-                  src='/images/ai-visibility-hero.jpg'
-                  alt='Healthcare professional creating AI-powered social media content'
-                  width={500}
-                  height={400}
-                  className='rounded-xl shadow-lg w-full h-auto'
-                  priority
-                />
+              <div
+                data-aos='fade-left'
+                className='hidden lg:flex justify-center'
+              >
+                <div className='relative w-full h-full'>
+                  <Lottie
+                    animationData={animationData}
+                    loop={true}
+                    autoplay={true}
+                    className='w-full h-full object-contain'
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -104,7 +122,13 @@ export default function SocialMediaPage() {
               data-aos='fade-up'
               data-aos-delay='100'
             >
-              Capacity+ deploys AI-driven digital agents that mirror your pharmacist or GP's voice and presence. These agents produce educational, credible content at scale—creating hyper-realistic posts on Facebook, Instagram, and LinkedIn without requiring your daily input. As AI becomes indistinguishable from reality, we help primary care teams leverage this technology responsibly to improve patient education, visibility, and trust.
+              Capacity+ deploys AI-driven digital agents that mirror your
+              pharmacist or GP's voice and presence. These agents produce
+              educational, credible content at scale—creating hyper-realistic
+              posts on Facebook, Instagram, and LinkedIn without requiring your
+              daily input. As AI becomes indistinguishable from reality, we help
+              primary care teams leverage this technology responsibly to improve
+              patient education, visibility, and trust.
             </p>
 
             {/* Content Strategy */}
@@ -171,16 +195,19 @@ export default function SocialMediaPage() {
                   See AI-Powered Content in Action
                 </h2>
                 <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
-                  Watch how AI agents create credible, educational healthcare content
+                  Watch how AI agents create credible, educational healthcare
+                  content
                 </p>
               </div>
-              
+
               <div className='relative w-full aspect-video bg-card border border-border rounded-2xl overflow-hidden'>
                 <div className='w-full h-full flex items-center justify-center text-muted-foreground'>
                   <div className='text-center space-y-4'>
                     <div className='text-6xl'>🎬</div>
                     <p>Video embed goes here</p>
-                    <p className='text-sm'>Replace with YouTube, Vimeo, or self-hosted video</p>
+                    <p className='text-sm'>
+                      Replace with YouTube, Vimeo, or self-hosted video
+                    </p>
                   </div>
                 </div>
               </div>
