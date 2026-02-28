@@ -7,6 +7,8 @@ import {
   Twitter,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { logo } from '@/assets';
 
 export function Footer() {
   return (
@@ -45,10 +47,14 @@ export function Footer() {
           {/* Brand */}
           <div className='md:col-span-2 space-y-4' data-aos='fade-up'>
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="font-semibold tracking-tight text-base lg:text-lg">
-                <span className="text-blue-600">Capacity</span>
-                <sup className="text-green-500 text-xs ml-0.5 align-super">+</sup>
-              </span>
+              <Image
+                src={logo}
+                alt="Capacity Plus Logo"
+                width={140}
+                height={40}
+                priority
+                className="h-auto w-auto object-contain"
+              />
             </Link>
             <p className='text-muted-foreground leading-relaxed max-w-sm'>
               Empowering healthcare leaders to reduce burnout, streamline
