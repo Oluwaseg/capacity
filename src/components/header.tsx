@@ -1,11 +1,11 @@
 'use client';
 
+import { logo } from '@/assets';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ThemeToggle } from './theme-toggle';
-import { logo } from '@/assets';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,25 +21,24 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
-        ? 'bg-background/80 backdrop-blur-xl border-b border-border'
-        : 'bg-transparent'
-        }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? 'bg-background/80 backdrop-blur-xl border-b border-border'
+          : 'bg-transparent'
+      }`}
     >
       <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8'>
         {/* Logo */}
         <Link
-          href="/"
-          className="flex items-center gap-2 group"
-          data-aos="fade-right"
+          href='/'
+          className='flex items-center gap-2 group'
+          data-aos='fade-right'
         >
           <Image
             src={logo}
-            alt="Capacity Plus Logo"
-            width={140}
-            height={40}
+            alt='Capacity Plus Logo'
             priority
-            className="h-auto w-auto object-contain"
+            className='h-24 w-auto object-contain'
           />
         </Link>
 

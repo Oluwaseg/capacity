@@ -1,3 +1,4 @@
+import { logo } from '@/assets';
 import {
   ArrowRight,
   Instagram,
@@ -6,9 +7,8 @@ import {
   Music,
   Twitter,
 } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { logo } from '@/assets';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -46,14 +46,12 @@ export function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-5 gap-12 mb-12'>
           {/* Brand */}
           <div className='md:col-span-2 space-y-4' data-aos='fade-up'>
-            <Link href="/" className="flex items-center gap-2 group">
+            <Link href='/' className='flex items-center gap-2 group'>
               <Image
                 src={logo}
-                alt="Capacity Plus Logo"
-                width={140}
-                height={40}
+                alt='Capacity Plus Logo'
                 priority
-                className="h-auto w-auto object-contain"
+                className='h-24 w-auto object-contain'
               />
             </Link>
             <p className='text-muted-foreground leading-relaxed max-w-sm'>
